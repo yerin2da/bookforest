@@ -1,0 +1,121 @@
+{
+  "nobelPrize": [
+    {
+      "year": "2024",
+      "category": "소설",
+      "laureates": [
+        {
+          "id": "1042",
+          "firstname": "한강",
+          "surname": "소년이 온다",
+          "motivation": "\"for her intense poetic prose that confronts historical traumas and exposes the fragility of human life\"",
+          "share": "1"
+        }
+      ]
+    },
+    {
+      "year": "2023",
+      "category": "소설",
+      "laureates": [
+        {
+          "id": "1032",
+          "firstname": "욘 포세",
+          "surname": "3부작",
+          "motivation": "\"for his innovative plays and prose which give voice to the unsayable\"",
+          "share": "1"
+        }
+      ]
+    },
+    {
+      "year": "2022",
+      "category": "소설",
+      "laureates": [
+        {
+          "id": "1017",
+          "firstname": "아니 에르노",
+          "surname": "세월",
+          "motivation": "\"for the courage and clinical acuity with which she uncovers the roots, estrangements and  collective restraints of personal memory\"",
+          "share": "1"
+        }
+      ]
+    },
+    {
+      "year": "2021",
+      "category": "소설",
+      "laureates": [
+        {
+          "id": "1004",
+          "firstname": "압둘라자크 구르나",
+          "surname": "낙원",
+          "motivation": "\"for his uncompromising and compassionate penetration of the effects of colonialism and the fate of the refugee in the gulf between cultures and continents\"",
+          "share": "1"
+        }
+      ]
+    },
+    {
+      "year": "2020",
+      "category": "시",
+      "laureates": [
+        {
+          "id": "993",
+          "firstname": "루이즈 글릭",
+          "surname": "아라라트",
+          "motivation": "\"for her unmistakable poetic voice that with austere beauty makes individual existence universal\"",
+          "share": "1"
+        }
+      ]
+    },
+    {
+      "year": "2019",
+      "category": "희곡",
+      "laureates": [
+        {
+          "id": "980",
+          "firstname": "페터 한트케",
+          "surname": "관객모독",
+          "motivation": "\"for an influential work that with linguistic ingenuity has explored the periphery and the specificity of human experience\"",
+          "share": "1"
+        }
+      ]
+    },
+    {
+      "year": "2017",
+      "category": "소설",
+      "laureates": [
+        {
+          "id": "947",
+          "firstname": "가즈오 이시구로",
+          "surname": "남아있는 나날",
+          "motivation": "\"who, in novels of great emotional force, has uncovered the abyss beneath our illusory sense of connection with the world\"",
+          "share": "1"
+        }
+      ]
+    },
+    {
+      "year": "2015",
+      "category": "프로",
+      "laureates": [
+        {
+          "id": "924",
+          "firstname": "스베틀라나 알렉시예비치",
+          "surname": "체르노빌의 목소리",
+          "motivation": "\"for her polyphonic writings, a monument to suffering and courage in our time\"",
+          "share": "1"
+        }
+      ]
+    },
+    {
+      "year": "2014",
+      "category": "소설",
+      "laureates": [
+        {
+          "id": "912",
+          "firstname": "파트리크 모디아노",
+          "surname": "어두운 상점들의 거리",
+          "motivation": "\"for the art of memory with which he has evoked the most ungraspable human destinies and\r\nuncovered the life-world of the occupation\"",
+          "share": "1"
+        }
+      ]
+    }
+  ]
+}
