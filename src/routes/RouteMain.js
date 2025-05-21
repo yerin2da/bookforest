@@ -12,12 +12,12 @@ import Register from "../pages/Register";
 
 import Notice from "../pages/Notice";
 import NoticeView from "../pages/NoticeView";
-import Guide from "../pages/Guide";
+// import Guide from "../pages/Guide";
 
 
 import ExhibiGallery from "../pages/exhibition/ExhibiGallery";
 import GuideGallery from "../pages/guide/GuideGallery";
-import JejuFestival from "../pages/main/JejuFestival";
+import JejuFestival from "../pages/main/Popular";
 import ThemeGallery from "../pages/theme/ThemeGallery";
 import MusicalGallery from "../pages/stage/MusicalGallery";
 import MusicGallery from "../pages/stage/MusicGallery";
@@ -27,6 +27,24 @@ import KorMusic from "../pages/stage/KorMusic";
 import AllSearch from "../pages/main/AllSearch";
 import MainMenu from "../pages/main/MainMenu";
 
+console.log("Main:", typeof Main);
+console.log("Login:", typeof Login);
+console.log("Sell:", typeof Sell);
+console.log("Register:", typeof Register);
+console.log("Notice:", typeof Notice);
+console.log("NoticeView:", typeof NoticeView);
+console.log("Guide:", typeof Guide);
+console.log("ExhibiGallery:", typeof ExhibiGallery);
+console.log("GuideGallery:", typeof GuideGallery);
+console.log("JejuFestival:", typeof JejuFestival);
+console.log("ThemeGallery:", typeof ThemeGallery);
+console.log("MusicalGallery:", typeof MusicalGallery);
+console.log("MusicGallery:", typeof MusicGallery);
+console.log("GuideDetail:", typeof GuideDetail);
+console.log("PlayGallery:", typeof PlayGallery);
+console.log("KorMusic:", typeof KorMusic);
+console.log("AllSearch:", typeof AllSearch);
+console.log("MainMenu:", typeof MainMenu);
 
 export default function RouteMain() {
     return (
@@ -71,7 +89,7 @@ export default function RouteMain() {
                 <Route path="/notice" element={<Notice />} />{/* 공지 */}
                 <Route path="/notice/:id" element={<NoticeView />} />{/* 공지 뷰 */ }
 
-                <Route path="/guide" element={<Guide/>} />{/* 이용가이드 */}
+                {/*<Route path="/guide" element={<Guide/>} />/!* 이용가이드 *!/*/}
 
                 <Route path="/login" element={<Login />} />{/* 로그인 */}
                 <Route path="/register" element={<Register />} />{/* 회원가입 */}

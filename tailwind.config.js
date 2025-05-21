@@ -6,40 +6,29 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        noto: ["Noto Sans KR", "sans-serif"],
+        noto: ["Noto Sans KR","sans-serif"],
         pretendard: ["Pretendard", "sans-serif"],
+        gmarket: ['"Gmarket Sans TTF"', 'sans-serif'],
+        alumni: ['"Alumni Sans"', 'sans-serif'],
       },
       colors: {
-        mainColor: '#3BBD2A', // 메인컬러
-        darkGreen: '#266D00', //
-        midGreen: '#9EDE95', //
-        lightGreen: '#E6F8DD', //
+        mainColor: '#1E9EFF', // 메인컬러
+        DarkMain: '#4CB2FF',
+        midMain: '#B4D3FF',
+        lightMain: '#D3E5FF',
+
+        textDarkGray: `#434141`,
+        textGray: `#999999`,
 
         mainBg: '#f6f6f6',//전체 배경색
-        subColor: '#6B1FC8', // 서브컬러
-        subColor2: '#9C59FF', // 서브컬러
-        subBurgundy: '#C000B9', // 서브컬러
-        midPurple: '#E4D2FF', //미드 보라
-        lightPurple: '#F7F1FF', //연한 보라
-        textBlack: '#333',
-        midBlack: '#2F2E33',
-        textWhite: '#fff',
-        textGray: '#9ca3af',
-        textDarkGray: '#8e9097',
-        midGray: '#f2f3f7',
-        textLightGray: '#e6e6e6',
-        //jeju
-        darkPurpleJj: '#817ECC',
-        midPurpleJj: '#DDDFF8',
-        lightPurpleJj: '#EFF0F8',
-        zeroPurpleJj: '#F5F7FA',
+
       },
       boxShadow: {
         shadowTop: "2px 2px 5px #9999991a",
         shadowBottom: "0px -1px 5px #9999991a",
         shadowBase: "2px 2px 5px rgba(0,0,0,0.1)",
         topInner: 'inset 0px -4px 6px rgba(0, 0, 0, 0.07)',
-        fit:'5px 6px 4px 0 rgba(0, 0, 0, 0.25)',
+        fit:'5px 6px 4px 0 rgba(0, 0, 0, 0.2)',
       },
       screens: {//브레이크포인트
         xs: "480px", //480~

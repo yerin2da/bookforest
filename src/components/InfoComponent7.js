@@ -1,30 +1,33 @@
-import MoreButton from "./MoreButton";
-
-export default function InfoComponent7({title,
+export default function InfoComponent7({
                                            txt,
+                                           txt2,
                                            icon_name,
-                                           onClick=null})
-{
+                                           bg_name,
+                                           txtClass,
+                                           txt2Class,
+                                           imgClass,
+                                           onClick = null,
+                                       }) {
     return (
-        <div className={`group cursor-pointer h-fit w-full bg-white rounded-xl overflow-hidden`}>
-            <div
-                onClick={onClick}
-                className={`w-full
-                 bg-center bg-no-repeat 
-                text-white relative 
-                bg-cover h-40 p-3 
-            `}
-                style={{
-                    backgroundImage: `url('${process.env.PUBLIC_URL}/img/${icon_name}.jpg')`,
-                }}>
-                <div className={`relative z-2 w-fit text-sm bg-mainColor text-white px-4 py-1 rounded-sm`}>{title}</div>
-            </div>
 
-            <div className={`flex items-center justify-between p-5 h-fit`}>
-                <div className={`text-base font-semibold whitespace-pre-line leading-tight`}>{txt}</div>
-                <MoreButton className={`border border-mainColor rounded`}/>
+            <div className={`px-10 h-full flex items-center justify-between gap-1 max-w-screen-md mx-auto font-pretendard`}
+                 onClick={onClick}
+            >
+                {/* 텍스트 */}
+                <div className="">
+                    <div className={`text-lg font-bold whitespace-pre-line break-keep ${txtClass}`}>
+                        {txt}
+                    </div>
+                    <div className={`mt-2 whitespace-pre-line ${txt2Class}`}>{txt2}</div>
+                </div>
+
+                {/* 아이콘 이미지 */}
+                <div
+                    className={`shrink-0 ${imgClass} bg-contain bg-no-repeat bg-center`}
+                    style={{
+                        backgroundImage: `url('${process.env.PUBLIC_URL}/img/mainVisual/${icon_name}.png')`,
+                    }}
+                ></div>
             </div>
-        </div>
-    )
-        ;
-};
+    );
+}

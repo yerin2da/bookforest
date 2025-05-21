@@ -8,7 +8,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {APIProvider} from '@vis.gl/react-google-maps';
 import LoginExpireWatcher from "./hooks/LoginExpireWatcher";
-
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 const url = process.env.REACT_APP_API_MAP_KEY;//구글맵
 

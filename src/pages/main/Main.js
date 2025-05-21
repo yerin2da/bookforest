@@ -1,23 +1,25 @@
 
 import JejuWeather from "./JejuWeather";
-import JejuGuide from "./JejuGuide";
+import Recommend from "./Recommend";
 import MainVisual from "./MainVisual";
-import JejuFestival from "./JejuFestival";
-import JejuTheme from "./JejuTheme";
-import JejuMusic from "./JejuMusic";
+import JejuFestival from "./Popular";
+import Art from "./Art";
+import Nobel from "./nobel";
 import JejuStage from "./JejuStage";
+import MainVisualSlide from "./MainVisualSlide";
+import Popular from "./Popular";
+import Children from "./Children";
 
 export default function Main() {
 
     return (
         <div className='w-full'>
-            <MainVisual/>
-            <JejuGuide/>
-            <JejuTheme/>
-            <JejuMusic/>
-            <JejuStage/>
-            {/*<JejuWeather/>*/}
-            <JejuFestival />
+            <MainVisualSlide/>
+            <Recommend/>
+            <Nobel/>
+            <Art/>
+            <Popular />
+            <Children/>
         </div>
     );
 };

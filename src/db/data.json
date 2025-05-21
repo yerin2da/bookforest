@@ -74,85 +74,123 @@
     "content": "문석이오름은 출입제한되오니 참고하시어 여행하시기바랍니다."
   }
 ],
-  "jejuCategory" : [
-    { "label": "관광지",
-    "code": "c1",
-    "img": "map"
+  "recommendCategory" : [
+    { "label": "소설",
+      "title": "스프링",
+      "author": "온다 리쿠",
+      "img": "1"
     },
-    { "label": "쇼핑",
-      "code": "c2",
-      "img": "shop"
+    { "label": "소설",
+      "title": "여름의 빌라",
+      "author": "백수린",
+      "img": "2"
     },
 
-    { "label": "숙소",
-      "code": "c3",
-      "img": "hotel"
+    { "label": "소설",
+      "title": "불편한 편의점 2",
+      "author": "김호연",
+      "img": "3"
     },
-    { "label": "음식",
-      "code": "c4",
-      "img": "food"
+    { "label": "소설",
+      "title": "스프링",
+      "author": "온다 리쿠",
+      "img": "4"
     },
-    { "label": "축제/행사",
-      "code": "c5",
-      "img": "festival"
+    { "label": "소설",
+      "title": "스프링",
+      "author": "온다 리쿠",
+      "img": "5"
     }
   ],
-  "jejuThemeCategory" : [
-      { "label": "아이들과 함께",
-        "txt": "자연이 놀이터가 되는 시간",
-        "code": "family",
-        "img": "family"
-      },
-      { "label": "커플끼리",
-        "txt": "둘이서 떠나는 설레는 여행길",
-        "code": "couple",
-        "img": "couple"
-      },
-      { "label": "시티투어 버스",
-        "txt": "창밖으로 만나는 제주",
-        "code": "tour",
-        "img": "tour"
-      },
-      { "label": "한라산의 숨결",
-        "txt": "자연과 함께하는 깊은 밤의 시간",
-        "code": "hanra",
-        "img": "hanra"
-      },
-      { "label": "나홀로",
-        "txt": "혼자여도 괜찮은, 나를 위한 여행",
-        "code": "person",
-        "img": "person"
-      },
-      { "label": "1박 2일",
-        "txt": "잠깐 떠나도 충분한 제주 여행",
-        "code": "days2",
-        "img": "days2"
-      }
+  "nobelCategory" : [
+    {
+      "title": "소년이 온다",
+      "author": "한강",
+      "img": "1"
+    },
+    {
+      "title": "세월",
+      "author": "아니 에르노",
+      "img": "2"
+    },
+
+    {
+      "title": "낙원",
+      "author": "압둘라자크 구르나",
+      "img": "3"
+    },
+    {
+      "title": "남아 있는 나날",
+      "author": "가즈오 이시구로",
+      "img": "4"
+    },
+    {
+      "title": "관객모독",
+      "author": "페터 한트케",
+      "img": "5"
+    }
   ],
-  "jejuStageCategory" : [
-      { "label": "국악",
-        "txt": "푸른 바람을 타고 퍼지는 \n우리의 선율",
-        "code": "korMusic",
-        "img": "korMusic"
+  "popularCategory" : [
+    {
+      "title": "소년이 온다",
+      "author": "한강",
+      "code": "1"
+    },
+    {
+      "title": "세월",
+      "author": "아니 에르노",
+      "code": "2"
+    },
+
+    {
+      "title": "낙원",
+      "author": "압둘라자크 구르나",
+      "code": "3"
+    },
+    {
+      "title": "남아 있는 나날",
+      "author": "가즈오 이시구로",
+      "code": "4"
+    },
+    {
+      "title": "관객모독",
+      "author": "페터 한트케",
+      "code": "5"
+    }
+  ],
+  "mainCategory" : [
+      {
+        "txt": "오늘,\n어떤 책을 읽을지\n고민이라면?",
+        "txt2": "도서관 사서가 추천하는, \n당신을 위한 도서 리스트!",
+        "code": "recommend",
+        "img": "recommend"
       },
-      { "label": "연극",
-        "txt": "감성으로 채워지는 제주\n그 깊은 울림",
-        "code": "play",
-        "img": "play"
+      {
+        "txt": "북포레스트가 주목한 \n케빈의 신작 \n 『구름관찰자를 위한 그림책』",
+        "txt2": "당신의 하루에 머무를  \n한 편의 이야기",
+        "code": "new",
+        "img": "new"
       },
 
-      { "label": "뮤지컬",
-        "txt": "자연과 예술이 맞닿는, \n마음을 울리는 감동",
-        "code": "musical",
-        "img": "musical"
+      {
+        "txt": "우리 학교 근처엔 \n어떤 도서관이 있을까?",
+        "txt2": "지금 확인해보세요!",
+        "code": "school",
+        "img": "school"
+      }
+  ],
+  "childrenCategory" : [
+      {
+        "txt": "한국 전래동화",
+        "code": 1
       },
-      { "label": "전시",
-        "code": "exhibition",
-        "img": "exhibition"
+      {
+        "txt": "외국 전래동화",
+        "code": 2
       },
-      { "label": "음악회",
-        "code": "music",
-        "img": "music"
+      {
+        "txt": "창작동화",
+        "code": 3
       }
   ]
 

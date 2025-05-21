@@ -8,7 +8,7 @@ import { LuBell } from "react-icons/lu";
 import 'swiper/css';
 import IconImage from "../components/IconImage";
 
-export default function Header() {
+export default function Header({ className=''}) {
     const location = useLocation();
     const currentPath = location.pathname;
 
@@ -56,48 +56,47 @@ export default function Header() {
 
     return (
 
-        <header className={`w-full text-2xl h-20 pr-6 pl-4 py-11 sticky top-0 left-0 z-[9999] 
-                ${bgBlack 
-                    ? "bg-midBlack text-white"
-                    : "bg-white"}
+        <header className={`w-full text-2xl h-20 pr-6 pl-4 py-11 sticky top-0 left-0 z-[9999] ${className} 
+                ${bgBlack
+                ? "bg-midBlack text-white"
+                : "bg-white"}
                 `}>
 
             <div className={`h-full flex items-center justify-between`}>
                 {showLogo ? (
-                    <div className={` w-full pr-6 flex items-center justify-between`}>
-                        <h1 className="text-3xl font-semibold text-mainColor">
-                            <Link to="/">
+                        <div className={` w-full pr-6 flex items-center justify-between h-full`}>
+                            <h1 className="font-semibold text-mainColor">
                                 <IconImage
                                     title={`로고`}
                                     imageSrc={`${process.env.PUBLIC_URL}/logo.png`}
-                                    />
-                                제주마실
-                            </Link>
-                        </h1>
-                        <IoSearch
-                            className={`cursor-pointer hover:text-mainColor`}
-                            onClick={() => navigate("/mainSearch")}
-                        />
-                    </div>
-                ) :
+                                    className={`w-44 !hover:scale-0`}
+                                    onClick={() => navigate("/")}
+                                />
+                            </h1>
+                            <IoSearch
+                                className={`cursor-pointer hover:text-mainColor`}
+                                onClick={() => navigate("/mainSearch")}
+                            />
+                        </div>
+                    ) :
                     // 메인 서치페이지
                     mainSearch
                         ? (
-                        <>
-                            {/*백버튼+검색*/}
-                            <BackButton caption={caption} />
-                            <SearchInput
-                                className={`!rounded-full !bg-gray-100 !border-0 !placeholder-gray-400`}
-                                inputPlaceholder={`제주에서 신나게 놀자!`}
-                                btnClassName={`text-gray-400`}
-                                ref={inputRef}
-                                onSearch={() => {
-                                    const keyword = inputRef.current?.value;
-                                    if (!keyword) return;
-                                    navigate("/mainSearch", { state: { keyword }, replace: true }); // 현재 경로에 state만 갱신
-                                }}
-                            />
-                        </>
+                            <>
+                                {/*백버튼+검색*/}
+                                <BackButton caption={caption} />
+                                <SearchInput
+                                    className={`!rounded-full !bg-gray-100 !border-0 !placeholder-gray-400`}
+                                    inputPlaceholder={`제주에서 신나게 놀자!`}
+                                    btnClassName={`text-gray-400`}
+                                    ref={inputRef}
+                                    onSearch={() => {
+                                        const keyword = inputRef.current?.value;
+                                        if (!keyword) return;
+                                        navigate("/mainSearch", { state: { keyword }, replace: true }); // 현재 경로에 state만 갱신
+                                    }}
+                                />
+                            </>
                         ) : (
                             <BackButton caption={caption} />
                         )

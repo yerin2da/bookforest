@@ -17,11 +17,13 @@ export default function Layout() {
 
 
     return (
-        <div className="flex flex-col w-full h-screen max-w-screen-md mx-auto border-l border-r border-gray-100">
-            <Header />
+        <div className="w-full h-screen flex flex-col  mx-auto border-l border-r border-gray-100 bg-mainColor">
+            <div className="w-full bg-white">
+                <Header className={`max-w-screen-xl`}/>
+            </div>
 
             <main
-                className={`w-full p-5 overflow-y-auto scrollbar-hide h-full border bg-white overflow-x-hidden
+                className={`w-full overflow-y-auto scrollbar-hide h-full border bg-white overflow-x-hidden
                  ${!hiddenMainBar ? "mb-[70px] " : ""}
                  ${pt0 ? "!py-0 !pb-5 " : ""}
                  
@@ -31,7 +33,6 @@ export default function Layout() {
             </main>
 
             {!hiddenMainBar && <MainBar />}
-            {/*<RandomDiagram/>*/}
         </div>
     );
 }

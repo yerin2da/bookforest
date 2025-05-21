@@ -1,35 +1,33 @@
+export default function InfoComponent6({
+                                           label, title, txt, icon_name,
+                                           index = 0, // index 추가
+                                           wrapClass = '', txtWrapClass = '', titleClass = '', labelClass = '', txtClass = '', imgClass = '',
+                                           onClick = null
+                                       }) {
+    const isEven = index % 2 === 0;//짝수면 사진이 위
 
-export default function InfoComponent6({title,
-                                       txt,
-                                       icon_name,
-                                       bg_Color='',
-                                       onClick=null})
-{
     return (
-        <div
-            onClick={onClick}
-            className={` cursor-pointer 
-                rounded-2xl bg-center bg-no-repeat 
-                text-white relative overflow-hidden 
-                bg-cover w-full h-full
-                flex items-center justify-start p-5 group
-            `}
-            >
-            {/* 배경 이미지 확장 영역 */}
+        <div className="max-w-[250px] conic-border-box p-4 items-stretch h-fit xs:p-6 sm:p-8">
             <div
-                className="absolute inset-0 bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-110"
-                style={{
-                    backgroundImage: `url('${process.env.PUBLIC_URL}/img/${icon_name}.jpg')`,
-                }}
-            />
-            <div className={`absolute left-0 bottom-0 w-full h-full ${bg_Color} z-1`}/>
+                className={`w-fit h-full flex ${isEven ? 'flex-col-reverse' : 'flex-col'} rounded group justify-between gap-10`}
+            >
+                {/* 이미지 영역 */}
+                <div className="w-full overflow-hidden rounded-sm shadow-fit">
+                    <img
+                        src={`${process.env.PUBLIC_URL}/img/mainNobel/${icon_name}.png`}
+                        alt={`${title}`}
+                        className="h-full object-cover transition-transform duration-500 group-hover:scale-105 "
+                        onClick={onClick}
+                    />
+                </div>
 
-            <div className={`relative z-2`}>
-                <div className={`text-lg font-semibold pb-1`}>{title}</div>
-                <div className={`text-sm font-light`}>{txt}</div>
+
+                {/* 텍스트 영역 */}
+                <div className={`${txtWrapClass}`}>
+                    <p className={`text-sm xs:text-base font-medium text-black pb-0.5 ${titleClass}`}>{title}</p>
+                    <p className={`text-xs xs:text-sm text-textGray ${txtClass}`}>{txt}</p>
+                </div>
             </div>
-
         </div>
-)
-    ;
-};
+    );
+}

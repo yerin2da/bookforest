@@ -1,24 +1,27 @@
 
-export default function InfoComponent3({title, txt, txt2, icon_name, wrapClass='', txtWrapClass='', titleClass='', txtClass='', txt2Class='', imgClass='' ,  onClick=null}) {
+export default function InfoComponent3({label, title, txt, txt2, icon_name, wrapClass='', txtWrapClass='', titleClass='',labelClass='', txtClass='', txt2Class='', imgClass='' ,  onClick=null}) {
     return (
-        <div
-            onClick={onClick}
-            className={`group p-4 bg-center bg-no-repeat text-white relative overflow-hidden ${wrapClass} bg-cover `}
-            >
-            {/* 배경 이미지 확장 영역 */}
+        <div className={`max-w-[200px]`}>
             <div
-                className="absolute inset-0 bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-110"
-                style={{
-                    backgroundImage: `url('${process.env.PUBLIC_URL}/img/${icon_name}.jpg')`,
-                }}
-            />
-
-            <div className={`absolute left-0 bottom-0 w-full h-full flex items-end p-3 bg-gradient-to-t from-black/80 to-transparent`}>
-
-                <div className={`${txtWrapClass} `}>
-                    <p className={`text-base  ${titleClass} multi-ellipsis2`}>{title}</p>
-                    <p className={`text-xs ${txtClass}`}>{txt}</p>
+                onClick={onClick}
+                className={`w-full rounded-lg group bg-center bg-no-repeat text-white relative overflow-hidden ${wrapClass} bg-cover shadow-fit`}
+            >
+                {/* 이미지 영역 */}
+                <div className="w-full overflow-hidden rounded-sm shadow-fit">
+                    <img
+                        src={`${process.env.PUBLIC_URL}/img/mainRecommend/${icon_name}.jpg`}
+                        alt={`${title}`}
+                        className="h-full object-cover transition-transform duration-500 group-hover:scale-105 "
+                        onClick={onClick}
+                    />
                 </div>
+
+            </div>
+
+            <div className={`${txtWrapClass} pt-4 `}>
+                <p className={`text-xs bg-DarkMain text-white w-fit px-3 py-1 rounded-sm mb-1 ${labelClass}`}>{label}</p>
+                <p className={`text-sm xs:text-base text-black font-medium pb-0.5 ${titleClass}`}>{title}</p>
+                <p className={`text-xs xs:text-sm text-textGray ${txtClass}`}>{txt}</p>
             </div>
         </div>
     );

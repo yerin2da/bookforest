@@ -2,26 +2,174 @@
  @use "tailwindcss/base";
  @use "tailwindcss/components";
  @use "tailwindcss/utilities";
+
+
  // 변수 선언
- $subColor: #6B1FC8;
- $subColor2: #9C59FF;
- $lightPurple:#F7F1FF;
- $subBurgundy: #C000B9;
- $lightPink: #f1eefa;
- $textBlack: #333;
- $textGray: #9ca3af;
- $textWhite: #fff;
- $textDarkGray: #8e9097;
- $midGray: #f2f3f7;
- $textLightGray: #e6e6e6;
- $lightBlack: #575757;
-
-
- $mainColor: #3BBD2A; // 메인컬러
- $darkGreen: #266D00; //
- $midGreen: #9EDE95; //
- $lightGreen: #E6F8DD; //
+ $mainColor: #1E9EFF; // 메인컬러
+ $DarkMain: #4CB2FF; //
+ $midMain: #B4D3FF; //
+ $lightMain: #D3E5FF; //
+ $textGray: #b53232; //
  $mainBg: #f6f6f6;//전체 배경색
+
+ /* 전역에서 한 번만 선언 */
+ @font-face {
+   font-family: 'GmarketSansMedium';
+   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+ }
+
+ /* Reset 기본 마진 및 패딩 제거 */
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   @apply tracking-tight leading-tight
+
+ }
+
+ /* 기본 폰트 설정 */
+ body {
+   font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   /*background-color: #f6f6f6;*/
+   color: #333;
+   line-height: 1.5;
+   font-size: 16px;
+   font-weight: 400;
+   position: relative;
+ }
+
+ body::after {
+   content: "";
+   display: block;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   //background: rgba(0, 0, 0, 0.7);
+   //background: rgba(255, 255, 255, 0.9);
+   z-index: 9999;
+   pointer-events: none;
+ }
+ header{
+   //display: none!important;
+ }
+ footer{
+   //display: none!important;
+ }
+
+ /*다크모드*/
+ body.dark-mode {
+   background-color: #1e1e1e;
+   color: #fff;
+ }
+ section{
+   @apply w-full py-10
+ }
+ section > div{
+   @apply max-w-screen-xl px-4 overflow-hidden
+ }
+
+ //그라디언트 보더
+ .conic-border-box {
+   border: 6px solid transparent;
+
+   border-image: conic-gradient(
+     from -90deg at center,
+     #d3d3d3 2%,
+     #ffffff 18%,
+     #f6f6f6 24%,
+     #D5D4D2 37%,
+     #FFFFFF 48%,
+     #FFFFFF 55%,
+     #D5D4D2 67%,
+     #FFFFFF 76%,
+     #ffffff 80%,
+     #d3d3d3 100%
+   ) 1;
+
+ }
+
+ //텍스트 보더
+ @layer utilities {
+   .text-stroke {
+     -webkit-text-stroke: 0.1px $textGray;
+   }
+
+   .text-stroke-white {
+     -webkit-text-stroke: 1px white;
+   }
+
+   .text-stroke-2 {
+     -webkit-text-stroke: 2px black;
+   }
+ }
+
+ /* 코드태그 블록 스타일 */
+ code {
+   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+ }
+
+ /* 기본 링크 스타일 */
+ a {
+   text-decoration: none;
+   color: inherit;
+   display: block;
+   width: 100%;
+ }
+ a:hover {
+ }
+
+ /* 버튼 기본 스타일 */
+ button {
+   cursor: pointer;
+   outline: none;
+   border: 1px solid transparent;
+   transition: 0.5s;
+ }
+
+ .custom-swiper .swiper-pagination {
+   bottom: 10px !important; /* 페이지네이션을 하단으로 배치 */
+   left: 50% !important; /* 가운데 정렬 */
+   transform: translateX(-50%);
+   display: flex;
+   flex-direction: row; /* 가로 정렬 */
+   align-items: center;
+   justify-content: center;
+   width: auto;
+ }
+ .custom-swiper .swiper-pagination-bullet{
+   background: #676767;
+ }
+ .custom-swiper .swiper-pagination-bullet-active{
+   background: #575757;
+ }
+
+ /* 반응형 그리드 */
+ @media (max-width: 480px) {
+
+   .text-xs { font-size: 0.75rem; } /* 기존: 0.75rem (유지) */
+   .text-sm { font-size: 0.85rem; } /* 기존: 0.875rem */
+   .text-base { font-size: 0.95rem; } /* 기존: 1rem */
+   .text-lg { font-size: 1.05rem; } /* 기존: 1.125rem */
+   .text-xl { font-size: 1.15rem; } /* 기존: 1.25rem */
+   .text-2xl { font-size: 1.3rem; } /* 기존: 1.5rem */
+   .text-3xl { font-size: 1.6rem; } /* 기존: 1.875rem */
+   .text-4xl { font-size: 1.8rem; } /* 기존: 2.25rem */
+   .text-5xl { font-size: 2rem; } /* 기존: 3rem */
+ }
+
+
+ /* 원하는 클래스에서 사용 */
+ .sectionTitle {
+   font-family: 'GmarketSansMedium', "Noto Sans KR" !important;
+
+ }
+
 
  @mixin btn($color){
    display: inline-flex;
@@ -49,29 +197,6 @@
    font-weight: 500;
  }
 
- body {
-   position: relative;
- }
-
- body::after {
-   content: "";
-   display: block;
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100vh;
-   //background: rgba(0, 0, 0, 0.7);
-   //background: rgba(255, 255, 255, 0.9);
-   z-index: 9999;
-   pointer-events: none;
- }
- header{
-   //display: none!important;
- }
- footer{
-   //display: none!important;
- }
   .contentsBox{
     @apply w-full rounded-xl p-8 mb-3 shadow-shadowBase
   }
@@ -84,32 +209,6 @@
   }
  .btnBorder-mainColor {
     @include btnBorder($mainColor);
-  }
-  .btn-subColor {
-    @include btn($subColor);
-  }
- .btnBorder-subColor {
-   @include btnBorder($subColor);
- }
-  .btn-subColor2 {
-    @include btn($subColor2);
-  }
- .btnBorder-subColor2 {
-   @include btnBorder($subColor2);
- }
-
- .btn-lightPurple {
-    @include btn($lightPurple);
-  }
- .btnBorder-lightPurple {
-   @include btnBorder($lightPurple);
- }
-
-  .btn-black {
-    @include btn($textBlack);
-  }
- .btn-LightBlack {
-    @include btn($lightBlack);
   }
 
   .CTAComponent{
@@ -132,7 +231,7 @@
  }
 
  .SignUp button:focus {
-    @apply shadow-lightPurple
+    //@apply shadow-lightPurple
   }
 
 
@@ -141,7 +240,7 @@
  }
  input{
    outline: none !important;
-   border: 1px solid $textLightGray;
+   border: 1px solid $textGray;
    background: white;
  }
 
@@ -151,10 +250,10 @@
  input:focus{
    border: 1px solid $mainColor !important;
  }
+
  input::placeholder,
- textarea::placeholder,
- .rs__placeholder{
-   @apply text-sm font-normal !text-gray-300
+ textarea::placeholder{
+   @apply text-sm font-normal text-gray-300
  }
 
  /* 셀렉, 옵션 스타일 */
@@ -169,257 +268,23 @@
    padding-right: 1.5rem !important;
    background-color: white !important;
    outline: none !important;
-   border: 1px solid $textLightGray !important;
+   border: 1px solid $textGray !important;
    cursor: pointer;
  }
 
  select > option {
    background: white !important;
    font-weight: 300 !important;
-   color: $textDarkGray !important;
- }
-
- select:focus-visible{
-   outline: 1px solid transparent;
-  }
-
-  .search-input::placeholder {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-  }
-
- /* react-select 기본 높이, 테두리, 배경 등 */
- .rs__control {
-   background-color: white !important;
-   border-radius: 0.4rem !important;
-   height: 48px !important;
-   padding: 0 0.5rem !important;
-   //font324223-size: 14px !important;
-   font-weight: 400 !important;
-   display: flex !important;
-   align-items: center !important;
-   border-color: $subColor2 !important;
-   cursor: pointer!important;
-  @apply shadow-shadowBase
- }
- .css-13cymwt-control{
-   transition: 0s;
- }
- //선택된 밸류값
- .rs__single-value.css-1dimb5e-singleValue{
-   color: $subColor2 !important;
-   @apply text-base
- }
-
- //화살표
- .css-1xc3v61-indicatorContainer{
-   transition: 0s;
- }
- .css-15lsz6c-indicatorContainer{
-   color: $textGray!important;
-   transition: 0s;
- }
-
- .rs__value-container{
-   height: 48px !important;
- }
- .rs__single-value{
-   line-height: 45px;
-   height: 48px !important;
- }
-
- .rs__control--is-focused {
-   box-shadow: none !important;
-   border: 1px solid $subColor2 !important;
- }
-
- /* 선택된 값 */
- .rs__single-value {
-   color: $textBlack !important;
-   font-size: 0.875rem !important;
-   font-weight: 400 !important;
- }
-
- /* placeholder 스타일 */
- .rs__placeholder{
-   height: 48px !important;
-   line-height: 45px !important;
- }
-
- /* 메뉴(dropdown 전체) */
- .rs__menu {
-
- }
- //bar
- .rs__indicator-separator{
-   display: none !important;
- }
-
- /* 옵션 항목 */
- .rs__option {
-   font-size: 0.875rem !important;
-   padding: 0.5rem 0.75rem !important;
-   color: $textBlack !important;
-   background-color: white !important;
-
-   &:hover {
-     background-color: $lightPurple !important;
-   }
- }
-
-
- .rs__option--is-selected {
-   background-color: $lightPurple !important;
-   color: $subColor2 !important;
- }
-
- /* 입력 커서용 (is-focused 상태) */
- .rs__input {
-   color: $textBlack !important;
- }
-
- /*===========================================================*/
- //1줄까지만 보여주고 숨김
- .multi-ellipsis {
-   display: -webkit-box;
-   -webkit-line-clamp: 1; /* 보여줄 줄 수 */
-   -webkit-box-orient: vertical;
-   overflow: hidden;
-   text-overflow: ellipsis;
- }
-
- //2줄까지만 보여주고 숨김
- .multi-ellipsis2 {
-   display: -webkit-box;
-   -webkit-line-clamp: 2; /* 보여줄 줄 수 */
-   -webkit-box-orient: vertical;
-   overflow: hidden;
-   text-overflow: ellipsis;
- }
- /*===========================================================*/
-
- /* 전체 달력 스타일 */
- .react-datepicker { //인풋
-   border: none !important;
-   font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-   font-size: clamp(15px, 0.9375rem + 0.25vw, 17px);
- }
-.react-datepicker__month-container{
-  border-radius: 5px;
-  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
-
-.react-datepicker__triangle{
-  display: none !important;
-}
-
- /* 년, 월 네비게이션 */
- .react-datepicker__header {
-   background: none !important;
-   border-bottom: none !important;
-   color: $textBlack;
-   font-weight: 400;
-   @apply text-base
- }
-
- /* 요일 스타일 */
- .react-datepicker__day-name {
-   color: $textGray !important;
-   font-weight: 500 !important;
-   margin: 0.25rem !important;
-   @apply text-sm
- }
-
- //모든 요일
- .react-datepicker__day{
-   margin: 0.25rem !important;
-   @apply text-sm
- }
-
- /* 주말 날짜 */
- .react-datepicker__day--weekend {
    color: $textGray !important;
  }
 
- /* 지난달, 다음달 날짜 */
- .react-datepicker__day--outside-month {
-   color: $textLightGray !important;
- }
-
- /* 오늘 날짜 */
- .react-datepicker__day--today {
-   background: $lightPurple !important;
-   font-weight: inherit;
-   border-radius: 5px;
- }
-
- /* 선택한 날짜 */
- .react-datepicker__day--selected {
-   background: $subColor2 !important;
-   color: $textWhite !important;
- }
-
- /* 네비게이션에서 연도/월 변경 버튼 숨기기 */
- .react-datepicker__navigation--years {
-   display: none !important;
- }
- .react-datepicker__navigation--months {
-   display: none !important;
- }
-
- //초기화 아이콘
- .react-datepicker__close-icon{
-   display: none;
- }
-
- //마이데이트피커
- .date_btn{
-   border:1px solid $textLightGray;
- }
-
- //타임피커
-.react-time-picker__wrapper{
-  border: none !important;
-}
-.react-time-picker__inputGroup__input{
-  width: 50px !important;
-  border: 1px solid $textLightGray;
-  text-align: center;
-  @apply h-11
-}
-.react-time-picker__inputGroup__amPm{//오전, 오후
- width: 65px !important;
- text-align: center;
-}
-.react-time-picker__inputGroup > span.react-time-picker__inputGroup__divider:nth-of-type(2)  {// 오전오후 바로 뒤
- padding: 0 1px !important;
-}
-.react-time-picker__inputGroup > span.react-time-picker__inputGroup__divider:nth-of-type(3)  {// :
- color: $textGray!important;
- padding: 0 5px !important;
-}
-.react-time-picker__inputGroup__leadingZero{// 0
- position: relative;
- z-index: 2;
- left:18px
-}
-.react-time-picker__inputGroup__input.react-time-picker__inputGroup__hour.react-time-picker__inputGroup__input--hasLeadingZero{
-  width: 41px !important;
-}
-.react-time-picker__inputGroup__input.react-time-picker__inputGroup__minute.react-time-picker__inputGroup__input--hasLeadingZero{
-  width: 41px !important;
+select:focus-visible{
+  outline: 1px solid transparent;
 }
 
-//swal alert 얼러트 창
-.sm-alert{
-  @apply w-72 h-72
-}
-.sm-icon{
-  @apply w-20 h-20
-}
-
-section{
-  @apply w-full py-6
+.search-input::placeholder {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
 }
 
  .swiper-pagination {
@@ -433,6 +298,21 @@ section{
  .swiper-pagination-bullet-active {
    @apply bg-mainColor; /* 현재 활성화된 동그라미 */
  }
+
+ .swiper {
+   position: relative;
+ }
+
+ .swiper-button-prev,
+ .swiper-button-next {
+  @apply text-[#636363] max-w-screen-md
+ }
+ .swiper-button-next::after,
+ .swiper-button-prev::after {
+   font-size: 24px;
+ }
+
+
 
  //위아래 둥실둥실 애니메이션
  @keyframes float {
