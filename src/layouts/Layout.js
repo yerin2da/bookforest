@@ -17,22 +17,24 @@ export default function Layout() {
 
 
     return (
-        <div className="w-full h-screen flex flex-col  mx-auto border-l border-r border-gray-100 bg-mainColor">
-            <div className="w-full bg-white">
-                <Header className={`max-w-screen-xl`}/>
+        <div className="w-full h-screen flex flex-col mx-auto bg-white">
+            <div className="w-full flex justify-center">
+                <Header className={``}/>
             </div>
 
             <main
-                className={`w-full overflow-y-auto scrollbar-hide h-full border bg-white overflow-x-hidden
-                 ${!hiddenMainBar ? "mb-[70px] " : ""}
+                className={`w-full overflow-y-auto scrollbar-hide h-full bg-white overflow-x-hidden
+                 ${!hiddenMainBar ? "" : ""}
                  ${pt0 ? "!py-0 !pb-5 " : ""}
                  
                  `}>
 
                 <Outlet/> {/* 각 페이지 렌더링 */}
-            </main>
 
-            {!hiddenMainBar && <MainBar />}
+            
+                {/*푸터*/}
+                <MainBar />
+            </main>
         </div>
     );
 }

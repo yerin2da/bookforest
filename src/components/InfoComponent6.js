@@ -7,7 +7,7 @@ export default function InfoComponent6({
     const isEven = index % 2 === 0;//짝수면 사진이 위
 
     return (
-        <div className="max-w-[250px] conic-border-box p-4 items-stretch h-fit xs:p-6 sm:p-8">
+        <div className="max-w-[250px] conic-border-box p-4 xs:p-6 sm:p-8 w-full h-full">
             <div
                 className={`w-fit h-full flex ${isEven ? 'flex-col-reverse' : 'flex-col'} rounded group justify-between gap-10`}
             >
@@ -21,11 +21,10 @@ export default function InfoComponent6({
                     />
                 </div>
 
-
                 {/* 텍스트 영역 */}
                 <div className={`${txtWrapClass}`}>
-                    <p className={`text-sm xs:text-base font-medium text-black pb-0.5 ${titleClass}`}>{title}</p>
-                    <p className={`text-xs xs:text-sm text-textGray ${txtClass}`}>{txt}</p>
+                    <p className={`text-sm xs:text-base font-medium text-black pb-0.5 whitespace-nowrap ${titleClass}`}>{title}</p>
+                    <p className={`text-xs xs:text-sm  text-textGray whitespace-nowrap ${txtClass}`}>{txt}</p>
                 </div>
             </div>
         </div>

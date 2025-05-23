@@ -23,32 +23,43 @@ export default function JejuTheme() {
                     title={<>이달의 <span className={`text-mainColor`}>추천</span> 도서</>}
                 />
                 <Swiper
-                    className="overflow-visible"
+                    className="overflow-visible w-full h-fit "
                     // modules={[Autoplay]} // ✅ Autoplay 활성화
                     direction="horizontal"
                     loop={false}
-                    spaceBetween={30}
-                    slidesPerView={2.2}
+                    spaceBetween={20}
+                    slidesPerView={1.5}
                     slidesPerGroup={1}
                     autoplay={{
                         delay: 5000,
                         disableOnInteraction: false,
                     }}
-                    style={{ width: '100%', height: 'fit-content' }}
-                    // breakpoints={{
-                    //     320: {
-                    //         slidesPerView: 2.2,
-                    //     },
-                    //     480: {
-                    //         slidesPerView: 3.5,
-                    //     },
-                    //     768: {
-                    //         slidesPerView: 4.5,
-                    //     },
-                    //     1024: {
-                    //         slidesPerView: 4.5,
-                    //     },
-                    // }}
+                    breakpoints={{
+                        350: {
+                            slidesPerView: 2.2,
+                            spaceBetween: 20,
+                        },
+                        480: {
+                            slidesPerView: 2.5,
+                            spaceBetween: 20,
+                        },
+                        500: {
+                            slidesPerView: 3.2,
+                            spaceBetween: 20,
+                        },
+                        640: {
+                            slidesPerView: 3.5,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 4.2,
+                            spaceBetween: 24,
+                        },
+                        1024: {
+                            slidesPerView: 5.2,
+                            spaceBetween: 32,
+                        },
+                    }}
                 >
 
                     {/* 컨텐츠 박스 */}
@@ -56,7 +67,7 @@ export default function JejuTheme() {
                         <SwiperSlide key={idx} className="">
                             <InfoComponent3
                                 onClick={() => handleClick(item.code)}
-                                icon_name={item.img}
+                                icon_name={`/mainRecommend/${item.code}`}
                                 label={item.label}
                                 title={item.title}
                                 txt={item.author}

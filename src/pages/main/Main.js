@@ -1,14 +1,12 @@
 
-import JejuWeather from "./JejuWeather";
 import Recommend from "./Recommend";
-import MainVisual from "./MainVisual";
-import JejuFestival from "./Popular";
 import Art from "./Art";
 import Nobel from "./nobel";
-import JejuStage from "./JejuStage";
 import MainVisualSlide from "./MainVisualSlide";
 import Popular from "./Popular";
 import Children from "./Children";
+import React from "react";
+import BootstrapNavbar from "../BootstrapNavbar";
 
 export default function Main() {
 
@@ -18,7 +16,7 @@ export default function Main() {
             <Recommend/>
             <Nobel/>
             <Art/>
-            <Popular />
+            <Popular/>
             <Children/>
         </div>
     );

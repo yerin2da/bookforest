@@ -1,11 +1,20 @@
 import { IoIosArrowForward } from "react-icons/io";
-export default function SectionTitle({icon, title, className='', txtClass=''}) {
+import {redirect, useNavigate} from "react-router-dom";
+
+export default function SectionTitle({icon, title, className='', txtClass='', redirectPath=''}) {
+
+    const navigate = useNavigate();
+    const move = () => {
+        navigate(redirectPath);
+    }
+
     return (
-        <div className={`sectionTitle flex items-start justify-between relative z-3`}>
+        <div className={`sectionTitle flex items-start justify-between relative z-3 pb-6`}>
             <div
-                className={`font-bold text-lg pb-4 flex items-center gap-1 ${className}`}>{title}
+                className={`font-bold text-lg  flex items-center gap-1 ${className}`}>{title}
             </div>
-            <div className={`text-textGray text-xs flex items-start ${txtClass}`}>더보기<IoIosArrowForward /></div>
+            <div onClick={move}
+                className={`text-textGray text-xs flex items-start ${txtClass}`}>더보기<IoIosArrowForward /></div>
 
         </div>
     );

@@ -34,7 +34,7 @@ export default function Popular() {
                  }}
             />
 
-            <section>
+            <section className={`relative z-3`}>
                 <div className={``}>
                     {/*섹션제목*/}
                     <SectionTitle
@@ -48,14 +48,35 @@ export default function Popular() {
                         direction="horizontal"
                         loop={false}  // 슬라이드 반복
                         spaceBetween={30}
-                        slidesPerView={2.2}
+                        slidesPerView={1.8}
                         slidesPerGroup={1}
                         autoplay={{
                             delay: 5000,
                             disableOnInteraction: false
                         }}
                         style={{width: "100%", height: "fit-content"}}
-
+                        breakpoints={{
+                            360: {
+                                slidesPerView: 1.8,
+                                spaceBetween: 20,
+                            },
+                            480: {
+                                slidesPerView: 2.5,
+                                spaceBetween: 20,
+                            },
+                            640: {
+                                slidesPerView: 2.8,
+                                spaceBetween: 20,
+                            },
+                            768: {
+                                slidesPerView: 3.2,
+                                spaceBetween: 24,
+                            },
+                            1024: {
+                                slidesPerView: 4.2,
+                                spaceBetween: 32,
+                            },
+                        }}
                     >
 
                         {/* 컨텐츠 박스 */}

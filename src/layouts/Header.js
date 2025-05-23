@@ -2,11 +2,17 @@ import {Link, useLocation, matchPath, useNavigate} from "react-router-dom";
 import BackButton from "../UI/BackButton";
 import HambergerButton from "../UI/HambergerButton";
 import {IoSearch} from "react-icons/io5";
-import React, {useRef} from "react";
+import React, {useRef, useState} from "react";
 import SearchInput from "../components/SearchInput";
 import { LuBell } from "react-icons/lu";
 import 'swiper/css';
 import IconImage from "../components/IconImage";
+import NavIcon from "../components/NavIcon";
+import {FaBars} from "react-icons/fa6";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import BootstrapNavbar from "../pages/BootstrapNavbar"; // ← 핵심! (collapse, dropdown, modal 등 포함)
+
 
 export default function Header({ className=''}) {
     const location = useLocation();
@@ -56,35 +62,36 @@ export default function Header({ className=''}) {
 
     return (
 
-        <header className={`w-full text-2xl h-20 pr-6 pl-4 py-11 sticky top-0 left-0 z-[9999] ${className} 
+        <header className={`w-full text-2xl h-20 sticky top-0 z-[9999] max-w-screen-xl pl-4 ${className} 
                 ${bgBlack
-                ? "bg-midBlack text-white"
-                : "bg-white"}
+            ? "bg-midBlack text-white"
+            : "bg-white"}
                 `}>
 
             <div className={`h-full flex items-center justify-between`}>
                 {showLogo ? (
-                        <div className={` w-full pr-6 flex items-center justify-between h-full`}>
-                            <h1 className="font-semibold text-mainColor">
-                                <IconImage
-                                    title={`로고`}
-                                    imageSrc={`${process.env.PUBLIC_URL}/logo.png`}
-                                    className={`w-44 !hover:scale-0`}
-                                    onClick={() => navigate("/")}
-                                />
-                            </h1>
-                            <IoSearch
-                                className={`cursor-pointer hover:text-mainColor`}
-                                onClick={() => navigate("/mainSearch")}
-                            />
-                        </div>
+                    <div className={` w-full pr-6 flex items-center justify-between h-full`}>
+                        <h1
+                            className="font-black text-mainColor text-[24px]"
+                            onClick={() => navigate("/")}
+                        >
+                            BOOK<span className={`text-black`}> FOREST</span>
+                        </h1>
+
+                        {/*모바일*/}
+                        <HambergerButton className="lg:hidden" />
+
+                        {/*pc*/}
+                        <BootstrapNavbar className="hidden lg:block " />
+
+                    </div>
                     ) :
                     // 메인 서치페이지
                     mainSearch
                         ? (
                             <>
                                 {/*백버튼+검색*/}
-                                <BackButton caption={caption} />
+                                <BackButton caption={caption}/>
                                 <SearchInput
                                     className={`!rounded-full !bg-gray-100 !border-0 !placeholder-gray-400`}
                                     inputPlaceholder={`제주에서 신나게 놀자!`}
@@ -93,22 +100,24 @@ export default function Header({ className=''}) {
                                     onSearch={() => {
                                         const keyword = inputRef.current?.value;
                                         if (!keyword) return;
-                                        navigate("/mainSearch", { state: { keyword }, replace: true }); // 현재 경로에 state만 갱신
+                                        navigate("/mainSearch", {state: {keyword}, replace: true}); // 현재 경로에 state만 갱신
                                     }}
                                 />
                             </>
                         ) : (
-                            <BackButton caption={caption} />
+                            <BackButton caption={caption}/>
                         )
                 }
-                {!hiddenHamberger && !hiddenBell &&(
-                    // 공지사항
-                    <LuBell
-                        onClick={()=> navigate("/notice")}
-                        className={`cursor-pointer hover:text-mainColor`} />
-                )}
-                {/*    <HambergerButton className="" />*/}
+                {/*{!hiddenHamberger && !hiddenBell && (*/}
+                {/*    // 공지사항*/}
+                {/*    <LuBell*/}
+                {/*        onClick={() => navigate("/notice")}*/}
+                {/*        className={`cursor-pointer hover:text-mainColor`}/>*/}
+                {/*)}*/}
             </div>
+
+
+
         </header>
     );
 }

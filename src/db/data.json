@@ -74,32 +74,53 @@
     "content": "문석이오름은 출입제한되오니 참고하시어 여행하시기바랍니다."
   }
 ],
+  "mainCategory" : [
+    {
+      "txt": "오늘,\n어떤 책을 읽을지\n고민이라면?",
+      "txt2": "도서관 사서가 추천하는, \n당신을 위한 도서 리스트!",
+      "code": "recommend",
+      "img": "recommend"
+    },
+    {
+      "txt": "북포레스트가 주목한 \n케빈의 신작 \n 『구름관찰자를 위한 그림책』",
+      "txt2": "당신의 하루에 머무를  \n한 편의 이야기",
+      "code": "new",
+      "img": "new"
+    },
+
+    {
+      "txt": "우리 학교 근처엔 \n어떤 도서관이 있을까?",
+      "txt2": "지금 확인해보세요!",
+      "code": "school",
+      "img": "school"
+    }
+  ],
   "recommendCategory" : [
     { "label": "소설",
       "title": "스프링",
       "author": "온다 리쿠",
-      "img": "1"
+      "code": "1"
     },
     { "label": "소설",
       "title": "여름의 빌라",
       "author": "백수린",
-      "img": "2"
+      "code": "2"
     },
 
     { "label": "소설",
       "title": "불편한 편의점 2",
       "author": "김호연",
-      "img": "3"
+      "code": "3"
     },
     { "label": "소설",
-      "title": "스프링",
-      "author": "온다 리쿠",
-      "img": "4"
+      "title": "모 이야기",
+      "author": "최연주",
+      "code": "4"
     },
     { "label": "소설",
-      "title": "스프링",
-      "author": "온다 리쿠",
-      "img": "5"
+      "title": "모든 것은 영원했다",
+      "author": "정지돈",
+      "code": "5"
     }
   ],
   "nobelCategory" : [
@@ -132,51 +153,86 @@
   ],
   "popularCategory" : [
     {
-      "title": "소년이 온다",
-      "author": "한강",
+      "title": "우리가 빛의 속도로 갈 수 없다면",
+      "author": "김초엽",
       "code": "1"
     },
     {
-      "title": "세월",
-      "author": "아니 에르노",
+      "title": "너의 초록으로, 다시",
+      "author": "나태주, 한서형",
       "code": "2"
     },
 
     {
-      "title": "낙원",
-      "author": "압둘라자크 구르나",
+      "title": "아가미 (리커버)",
+      "author": "구병모",
       "code": "3"
     },
     {
-      "title": "남아 있는 나날",
-      "author": "가즈오 이시구로",
+      "title": "바깥은 여름",
+      "author": "김애란",
       "code": "4"
     },
     {
-      "title": "관객모독",
-      "author": "페터 한트케",
+      "title": "파타",
+      "author": "문가영",
       "code": "5"
     }
   ],
-  "mainCategory" : [
+
+  "artCategory" : [
       {
-        "txt": "오늘,\n어떤 책을 읽을지\n고민이라면?",
-        "txt2": "도서관 사서가 추천하는, \n당신을 위한 도서 리스트!",
-        "code": "recommend",
-        "img": "recommend"
-      },
-      {
-        "txt": "북포레스트가 주목한 \n케빈의 신작 \n 『구름관찰자를 위한 그림책』",
-        "txt2": "당신의 하루에 머무를  \n한 편의 이야기",
-        "code": "new",
-        "img": "new"
+        "title": "세상에서 가장 행복한 숲 - 핀란드 그림책展",
+        "code": "2",
+        "url" : "https://www.nlcy.go.kr/NLCY/contents/C41100000000.do?currentPageNo=2&idx=1128990&schM=view",
+        "date": "2025-04-11 ~ 2025-08-31",
+        "label": "국립어린이청소년도서관"
       },
 
       {
-        "txt": "우리 학교 근처엔 \n어떤 도서관이 있을까?",
-        "txt2": "지금 확인해보세요!",
-        "code": "school",
-        "img": "school"
+        "title": "안녕(SVEIKI)! 라트비아 - 그림책 원화전",
+        "code": "3",
+        "url" : "https://www.nlcy.go.kr/NLCY/contents/C41100000000.do?currentPageNo=2&idx=1127670&schM=view",
+        "date": "2024-10-25 ~ 2025-02-28",
+        "label": "국립어린이청소년도서관"
+      },
+    {
+      "title": "그리고 그림책」 1기 작가 전시",
+      "code": "1",
+      "url" : "https://www.nlcy.go.kr/NLCY/contents/C41100000000.do?currentPageNo=2&idx=1128999&schM=view",
+      "date": "2024-07-01 ~ 2025-04-13",
+      "label": "국립어린이청소년도서관"
+    },
+      {
+        "title": "열두 띠에 숨겨진 비밀",
+        "code": "4",
+        "url" : "https://www.nlcy.go.kr/NLCY/contents/C41100000000.do?currentPageNo=2&idx=1126153&schM=view",
+        "date": "2024-05-01 ~ 2024-08-31",
+        "label": "국립어린이청소년도서관"
+      },
+
+      {
+        "title": "책 먹는 여우, 도서관을 삼키다",
+        "code": "5",
+        "url" : "https://www.nlcy.go.kr/NLCY/contents/C41100000000.do?currentPageNo=2&idx=1124463&schM=view",
+        "date": "2023-10-20 ~ 2024-03-31",
+        "label": "국립어린이청소년도서관"
+      },
+
+      {
+        "title": "위기에 빠진 숲을 구하라 출동! 기후수비대",
+        "code": "6",
+        "url" : "https://www.nlcy.go.kr/NLCY/contents/C41100000000.do?currentPageNo=2&idx=1123060&schM=view",
+        "date": "2023-05-05 ~ 2023-08-31",
+        "label": "국립어린이청소년도서관"
+      },
+
+      {
+        "title": "세상을 잇는 신비한 탐험, 칠레",
+        "code": "7",
+        "url" : "https://www.nlcy.go.kr/NLCY/contents/C41100000000.do?currentPageNo=2&idx=1120990&schM=view",
+        "date": "2022-09-26 ~ 2023-03-31",
+        "label": "국립어린이청소년도서관"
       }
   ],
   "childrenCategory" : [

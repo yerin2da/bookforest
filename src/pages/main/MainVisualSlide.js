@@ -14,16 +14,14 @@ export default function MainVisualSlide() {
     };
 
     return (
-        <div className=" w-full">
+        <div className="w-full">
                 <Swiper
-                    className="w-full h-48" // 고정 높이
-                    modules={[Navigation,
-                        // Autoplay
-                    ]}
+                    className="w-full h-72 xs:h-92 sm:h-[450px]" // 고정 높이
+                    modules={[Navigation, Autoplay ]}
                     direction="horizontal"
-                    centeredSlides={false}
-                    spaceBetween={10}
-                    slidesPerView={"auto"}
+                    loop={true}  // 슬라이드 반복
+                    spaceBetween={0}
+                    slidesPerView={1}
                     slidesPerGroup={1}
                     autoplay={{
                         delay: 5000,
@@ -32,10 +30,9 @@ export default function MainVisualSlide() {
                     navigation={true}
                 >
                     {data.mainCategory.map((item, idx) => (
-                        <SwiperSlide key={idx} className={` w-full h-full  bg-no-repeat bg-cover text-black bg-center `}
+                        <SwiperSlide key={idx} className={`h-full bg-no-repeat bg-cover text-black bg-center`}
                              style={{
                                  backgroundImage: `url('${process.env.PUBLIC_URL}/img/mainVisual/${item.img}Bg.png')`,
-
                              }}
                         >
                             <InfoComponent7
@@ -46,12 +43,15 @@ export default function MainVisualSlide() {
                                 txtClass={item.code === "school" ? "text-white" : ""}
                                 txt2Class={
                                     item.code === "school"
-                                        ? "text-white text-lg"
-                                        : "text-sm text-textDarkGray"
+                                        ? "text-white text-lg sm:text-2xl"
+                                        : "text-base text-textDarkGray"
                                 }
-                                imgClass={
-                                    "w-28 h-28"
-                                }
+                                imgClass={`w-28 h-28 
+                                           xs:w-40 h-40
+                                           sm:w-60 h-60
+                                        `}
+
+
                             />
                         </SwiperSlide>
                     ))}

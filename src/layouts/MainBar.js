@@ -9,24 +9,33 @@ import { FaRegHeart } from "react-icons/fa";
 import { IoPerson } from "react-icons/io5";
 import { BsPerson } from "react-icons/bs";
 import ScrollTopButton from "../components/ScrollTopButton";
+import {useNavigate} from "react-router-dom";
 export default function MainBar() {
+    const navigate = useNavigate();
 
     return (
         <>
             {/*top버튼*/}
             <ScrollTopButton />
 
-            <footer className="w-full flex justify-around fixed bottom-0 z-50 bg-white shadow-shadowBottom max-w-screen-md mx-auto">
-                {/*네비*/}
-                    <NavIcon to="/" Icon={MdHomeFilled} label={'홈'}/>
-                    <NavIcon to="/mainSearch"
-                             Icon={IoSearch}
-                             label={'검색'}
-                    />
-                    <NavIcon to="/heart" Icon={ FaRegHeart } label={'찜'} className={`scale-x-[0.9] scale-y-[0.9]`}/>
-                    <NavIcon to="/mypage" Icon={ MdOutlinePersonOutline } label={'내정보'} className={`scale-x-[1.1] scale-y-[1.1]`}/>
-                    <NavIcon to="/mainMenu" Icon={FaBars} label={'전체'} className={`scale-x-[0.8] scale-y-[0.8]`}/>
+            <footer className="w-full py-16 px-4 flex flex-col items-center gap-4 bg-black mx-auto">
 
+                {/*로고*/}
+                <div
+                    className="font-black text-mainColor text-[24px]"
+                    onClick={() => navigate("/")}
+                >
+                    BOOK<span className={`text-white`}> FOREST</span>
+                </div>
+
+                {/* 텍스트 */}
+                <div className={`text-white text-center text-xs xs:text-sm space-y-1`}>
+                    <p className={`break-keep`}>(065758) 서울특별시 중구 국제로 110길, 국제빌딩 203호</p>
+                    <p>대표 강학수</p>
+                    <p>문의 02-365-7800</p>
+                    <p>메일 forest06@gmail.com</p>
+                    <p>Copyright©all rights reserved.</p>
+                </div>
             </footer>
         </>
     );

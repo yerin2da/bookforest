@@ -26,7 +26,7 @@ export default function ScrollTopButton() {
         show && (
             <button
                 onClick={scrollToTop}
-                className="fixed bottom-20 right-4 z-50 bg-mainColor text-white p-3 rounded-full shadow-md hover:bg-green-800"
+                className="fixed bottom-52 right-4 z-50 bg-DarkMain bg-opacity-80 text-white p-3 rounded-full shadow-md hover:bg-green-800"
                 aria-label="위로 가기"
             >
                 <FaArrowUp className="text-lg" />

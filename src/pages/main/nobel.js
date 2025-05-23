@@ -5,6 +5,7 @@ import SectionTitle from "../../components/SectionTitle";
 import {Swiper, SwiperSlide} from "swiper/react";
 import data from "../../db/data.json";
 import InfoComponent3 from "../../components/InfoComponent3";
+import {Autoplay} from "swiper/modules";
 
 
 export default function Nobel() {
@@ -15,7 +16,7 @@ export default function Nobel() {
     };
 
     return (
-        <div className={`border border-green-900 relative bg-cover w-full`}>
+        <div className={`relative bg-cover w-full`}>
 
             {/* 배경 이미지 */}
             <div
@@ -45,40 +46,46 @@ export default function Nobel() {
 
                 <Swiper
                     className={`overflow-visible`}
-                    // modules={[Autoplay]}
+                    modules={[Autoplay]}
                     direction="horizontal"
-                    loop={false}  // 슬라이드 반복
+                    loop={true}  // 슬라이드 반복
                     spaceBetween={30}
-                    slidesPerView={2.2}
+                    slidesPerView={1.5}
                     slidesPerGroup={1}
                     autoplay={{
-                        delay: 5000,
-                        disableOnInteraction: false
+                        delay: 0, // 끊김 없이 계속 흐르게
+                        disableOnInteraction: false,
                     }}
+                    speed={6000} // 슬라이딩 이동 속도
+
                     style={{width: "100%", height: "fit-content"}}
-                    // breakpoints={{
-                    //     // 기본 화면 크기
-                    //     320: {
-                    //         slidesPerView: 2.2,
-                    //     },
-                    //     // 화면 크기가 480px 이상일 때
-                    //     // 480: {
-                    //     //     slidesPerView: 3.5,
-                    //     // },
-                    //     // 화면 크기가 768px 이상일 때
-                    //     768: {
-                    //         slidesPerView: 4.5,
-                    //     },
-                    //     // 화면 크기가 1024px 이상일 때
-                    //     1024: {
-                    //         slidesPerView: 5.5,
-                    //     }
-                    // }}
+                    breakpoints={{
+                        350: {
+                            slidesPerView: 2.2,
+                            spaceBetween: 20,
+                        },
+                        480: {
+                            slidesPerView: 2.5,
+                            spaceBetween: 20,
+                        },
+                        640: {
+                            slidesPerView: 2.8,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 3.2,
+                            spaceBetween: 24,
+                        },
+                        1024: {
+                            slidesPerView: 4.2,
+                            spaceBetween: 32,
+                        },
+                    }}
                 >
 
                     {/* 컨텐츠 박스 */}
                     {data.nobelCategory.map((item, idx) => (
-                        <SwiperSlide key={idx} className={`rounded overflow-hidden flex flex-col `}>
+                        <SwiperSlide key={idx} className={`rounded overflow-hidden flex-col h-auto flex items-stretch`}>
                             <InfoComponent6
                                 index={idx}
                                 onClick={() => handleClick(item.code)}

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import {BrowserRouter, HashRouter} from 'react-router-dom';
+import {HashRouter} from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 import AuthWatcher from './hooks/AuthWatcher';
 import RouteMain from './routes/RouteMain';
@@ -10,6 +10,10 @@ import {APIProvider} from '@vis.gl/react-google-maps';
 import LoginExpireWatcher from "./hooks/LoginExpireWatcher";
 import 'swiper/css';
 import 'swiper/css/navigation';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // ← 핵심! (collapse, dropdown, modal 등 포함)
+
 
 const url = process.env.REACT_APP_API_MAP_KEY;//구글맵
 

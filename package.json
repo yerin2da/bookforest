@@ -2,6 +2,7 @@
   "name": "library",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://yerin2da.github.io/bookforest",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -10,11 +11,13 @@
     "@types/react-icons": "^3.0.0",
     "@vis.gl/react-google-maps": "^1.5.2",
     "axios": "^1.8.4",
+    "bootstrap": "^5.3.6",
     "date-fns": "^4.1.0",
     "he": "^1.2.0",
     "lucide-react": "^0.501.0",
     "md5": "^2.3.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.10",
     "react-clock": "^5.1.0",
     "react-datepicker": "^8.3.0",
     "react-dom": "^18.2.0",
@@ -34,7 +37,6 @@
     "web-vitals": "^2.1.4",
     "xml2js": "^0.6.2"
   },
-  "homepage": "https://yerin2da.github.io/bookforest",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

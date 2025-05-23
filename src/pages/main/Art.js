@@ -10,8 +10,9 @@ export default function Art() {
     const navigate = useNavigate();
 
     const handleClick = (code) => {
-        navigate(`theme/gallery?category=${code}`);
+        navigate(`/art/gallery?category=${code}`); // ✅ 히스토리 덮어쓰기
     };
+
 
     return (
         <section className={``}>
@@ -21,51 +22,62 @@ export default function Art() {
                 <SectionTitle
                     className={``}
                     title={<div>책과 <span className={`text-mainColor`}>예술</span><span>이</span> 만나는 공간</div>}
+                    redirectPath={`art/gallery`}
                 />
                 <Swiper
                     className={`overflow-visible`}
                     // modules={[Autoplay]}
                     direction="horizontal"
                     loop={false}  // 슬라이드 반복
-                    spaceBetween={30}
-                    slidesPerView={2.2}
+                    spaceBetween={20}
+                    slidesPerView={1.5}
                     slidesPerGroup={1}
                     autoplay={{
                         delay: 5000,
-                        disableOnInteraction: false
+                        disableOnInteraction: false,
                     }}
-                    style={{ width: "100%", height: "fit-content" }}
-                    // breakpoints={{
-                    //     // 기본 화면 크기
-                    //     320: {
-                    //         slidesPerView: 2.5,
-                    //     },
-                    //     // 화면 크기가 480px 이상일 때
-                    //     480: {
-                    //         slidesPerView: 3,
-                    //     },
-                    //     // 화면 크기가 768px 이상일 때
-                    //     768: {
-                    //         slidesPerView: 3.5,
-                    //     },
-                    //     // 화면 크기가 1024px 이상일 때
-                    //     1024: {
-                    //         slidesPerView: 3.5,
-                    //     }
-                    // }}
+                    breakpoints={{
+                        360: {
+                            slidesPerView: 1.8,
+                            spaceBetween: 20,
+                        },
+                        480: {
+                            slidesPerView: 2.2,
+                            spaceBetween: 20,
+                        },
+                        500: {
+                            slidesPerView: 2.5,
+                            spaceBetween: 20,
+                        },
+                        640: {
+                            slidesPerView: 3.2,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 3.5,
+                            spaceBetween: 24,
+                        },
+                        1024: {
+                            slidesPerView: 4.8,
+                            spaceBetween: 32,
+                        },
+                    }}
                 >
 
                     {/* 컨텐츠 박스 */}
-                    {data.recommendCategory.map((item, idx) => (
-                        <SwiperSlide key={idx}>
+                    {data.artCategory.map((item, idx) => (
+                        <SwiperSlide key={idx} className={``}>
                             <InfoComponent3
                                 onClick={() => handleClick(item.code)}
-                                icon_name={item.img}
+                                icon_name={`/mainArt/${item.code}`}
                                 label={item.label}
-                                labelClass={`!text-textGray !bg-transparent !px-0`}
+                                labelClass={`xs:text-sm !text-textGray !bg-transparent !px-0 !font-medium`}
                                 title={item.title}
-                                txt={item.author}
+                                txt={item.date}
                                 txtClass={`!text-textGray font-medium`}
+                                wrapClass={`min-w-[130px] !max-w-[200px] !max-h-[400px] h-full
+                                `}
+                                imgClass={`aspect-none`}
                             />
                         </SwiperSlide>
                     ))}

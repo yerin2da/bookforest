@@ -7,7 +7,7 @@ export default function InfoComponent4({
     return (
         <div
             onClick={onClick}
-            className={`w-full aspect-square flex justify-center items-center max-h-[180px]
+            className={`w-full h-full aspect-square flex justify-center items-center 
                         rounded-lg relative overflow-hidden ${bgClass}`}
         >
             {/* 원형 이미지 */}

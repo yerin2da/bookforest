@@ -67,11 +67,23 @@
    background-color: #1e1e1e;
    color: #fff;
  }
+ /* App.css 또는 전역 스타일 */
+ .dropdown-item {
+   color: #212529 !important;
+ }
+ .dropdown-item:hover {
+   color: #2a6fdb !important; /* Tailwind mainColor와 일치 시키면 됨 */
+ }
+
+ //헤더 네비 마우스오버시
+ .nav-link:hover {
+   color: var(--mainColor);
+ }
  section{
-   @apply w-full py-10
+   @apply w-full py-16 flex justify-center
  }
  section > div{
-   @apply max-w-screen-xl px-4 overflow-hidden
+   @apply max-w-screen-xl px-4 overflow-hidden w-full
  }
 
  //그라디언트 보더

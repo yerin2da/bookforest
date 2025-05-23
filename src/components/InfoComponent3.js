@@ -1,26 +1,26 @@
 
 export default function InfoComponent3({label, title, txt, txt2, icon_name, wrapClass='', txtWrapClass='', titleClass='',labelClass='', txtClass='', txt2Class='', imgClass='' ,  onClick=null}) {
+
     return (
-        <div className={`max-w-[200px]`}>
+        <div className={`min-w-[130px] max-w-[160px] max-h-[320px] ${wrapClass}`}>
             <div
                 onClick={onClick}
-                className={`w-full rounded-lg group bg-center bg-no-repeat text-white relative overflow-hidden ${wrapClass} bg-cover shadow-fit`}
+                className={`w-full rounded-lg group bg-center bg-no-repeat text-white relative overflow-hidden bg-cover shadow-fit`}
             >
                 {/* 이미지 영역 */}
-                <div className="w-full overflow-hidden rounded-sm shadow-fit">
+                <div className={`w-full aspect-[3/4] overflow-hidden rounded-sm shadow-fit ${imgClass}`}>
                     <img
-                        src={`${process.env.PUBLIC_URL}/img/mainRecommend/${icon_name}.jpg`}
+                        src={`${process.env.PUBLIC_URL}/img/${icon_name}.jpg`}
                         alt={`${title}`}
-                        className="h-full object-cover transition-transform duration-500 group-hover:scale-105 "
+                        className={`w-full h-full object-fill transition-transform duration-500 group-hover:scale-105`}
                         onClick={onClick}
                     />
                 </div>
-
             </div>
 
-            <div className={`${txtWrapClass} pt-4 `}>
-                <p className={`text-xs bg-DarkMain text-white w-fit px-3 py-1 rounded-sm mb-1 ${labelClass}`}>{label}</p>
-                <p className={`text-sm xs:text-base text-black font-medium pb-0.5 ${titleClass}`}>{title}</p>
+            <div className={`${txtWrapClass} pt-4`}>
+                <p className={`text-xs bg-DarkMain text-white w-fit px-2 py-1 rounded-sm mb-1 font-light ${labelClass}`}>{label}</p>
+                <p className={`text-sm xs:text-base text-black font-medium pb-1 truncate ${titleClass}`}>{title}</p>
                 <p className={`text-xs xs:text-sm text-textGray ${txtClass}`}>{txt}</p>
             </div>
         </div>
