@@ -15,26 +15,16 @@ export default function Layout() {
         ||matchPath("/guide/gallery/:category", path)
         ||matchPath("/theme/gallery/:category", path);
 
-
     return (
-        <div className="w-full h-screen flex flex-col mx-auto bg-white">
-            <div className="w-full flex justify-center">
-                <Header className={``}/>
-            </div>
+        <div className="w-full min-h-screen flex flex-col items-center mx-auto">
+            <Header className={`sticky top-0 z-[9999] `}/>
 
-            <main
-                className={`w-full overflow-y-auto scrollbar-hide h-full bg-white overflow-x-hidden
-                 ${!hiddenMainBar ? "" : ""}
-                 ${pt0 ? "!py-0 !pb-5 " : ""}
-                 
-                 `}>
-
+            <main className={`w-full flex-grow  overflow-y-auto scrollbar-hide overflow-x-hidden `}>
                 <Outlet/> {/* 각 페이지 렌더링 */}
-
-            
-                {/*푸터*/}
-                <MainBar />
             </main>
+
+            {/*푸터*/}
+            {!hiddenMainBar && <MainBar />}
         </div>
     );
 }

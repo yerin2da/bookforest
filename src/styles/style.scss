@@ -50,7 +50,7 @@
    left: 0;
    width: 100%;
    height: 100vh;
-   //background: rgba(0, 0, 0, 0.7);
+   //background: rgba(0, 0, 0, 0.5);
    //background: rgba(255, 255, 255, 0.9);
    z-index: 9999;
    pointer-events: none;
@@ -84,6 +84,9 @@
  }
  section > div{
    @apply max-w-screen-xl px-4 overflow-hidden w-full
+ }
+ main > div:not(.main) {
+   @apply max-w-screen-xl p-4 mx-auto
  }
 
  //그라디언트 보더

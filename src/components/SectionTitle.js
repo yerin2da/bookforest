@@ -9,12 +9,12 @@ export default function SectionTitle({icon, title, className='', txtClass='', re
     }
 
     return (
-        <div className={`sectionTitle flex items-start justify-between relative z-3 pb-6`}>
+        <div className={`sectionTitle flex items-center justify-between relative z-3 pb-6`}>
             <div
                 className={`font-bold text-lg  flex items-center gap-1 ${className}`}>{title}
             </div>
             <div onClick={move}
-                className={`text-textGray text-xs flex items-start ${txtClass}`}>더보기<IoIosArrowForward /></div>
+                className={`text-textGray text-xs flex items-start cursor-pointer ${txtClass}`}>더보기<IoIosArrowForward /></div>
 
         </div>
     );

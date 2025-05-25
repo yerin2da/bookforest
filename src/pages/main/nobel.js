@@ -12,7 +12,7 @@ export default function Nobel() {
     const navigate = useNavigate();
 
     const handleClick = (code) => {
-        navigate(`/stage/gallery/${code}`);
+        navigate(`/nobel/gallery/${code}`);
     };
 
     return (
@@ -42,6 +42,8 @@ export default function Nobel() {
                     <SectionTitle
                         className={``}
                         title={<><span className={`text-mainColor`}>노벨 </span>문학상 수상자의 대표작</>}
+                        redirectPath={`nobel/gallery`}
+                        
                     />
 
                 <Swiper

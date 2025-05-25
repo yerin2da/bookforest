@@ -10,8 +10,11 @@ export default function Art() {
     const navigate = useNavigate();
 
     const handleClick = (code) => {
-        navigate(`/art/gallery?category=${code}`); // ✅ 히스토리 덮어쓰기
+        if (code.startsWith("http")) {
+            window.open(code, "_blank");
+        }
     };
+
 
 
     return (
@@ -68,14 +71,14 @@ export default function Art() {
                     {data.artCategory.map((item, idx) => (
                         <SwiperSlide key={idx} className={``}>
                             <InfoComponent3
-                                onClick={() => handleClick(item.code)}
+                                onClick={() => handleClick(item.url)}
                                 icon_name={`/mainArt/${item.code}`}
                                 label={item.label}
                                 labelClass={`xs:text-sm !text-textGray !bg-transparent !px-0 !font-medium`}
                                 title={item.title}
                                 txt={item.date}
                                 txtClass={`!text-textGray font-medium`}
-                                wrapClass={`min-w-[130px] !max-w-[200px] !max-h-[400px] h-full
+                                wrapClass={`cursor-pointer min-w-[130px] !max-w-[200px] !max-h-[400px] h-full
                                 `}
                                 imgClass={`aspect-none`}
                             />

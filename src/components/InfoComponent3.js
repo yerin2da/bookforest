@@ -2,9 +2,9 @@
 export default function InfoComponent3({label, title, txt, txt2, icon_name, wrapClass='', txtWrapClass='', titleClass='',labelClass='', txtClass='', txt2Class='', imgClass='' ,  onClick=null}) {
 
     return (
-        <div className={`min-w-[130px] max-w-[160px] max-h-[320px] ${wrapClass}`}>
+        <div onClick={onClick} className={`min-w-[130px] max-w-[160px] max-h-[320px] ${wrapClass}`}>
             <div
-                onClick={onClick}
+
                 className={`w-full rounded-lg group bg-center bg-no-repeat text-white relative overflow-hidden bg-cover shadow-fit`}
             >
                 {/* 이미지 영역 */}
@@ -13,7 +13,7 @@ export default function InfoComponent3({label, title, txt, txt2, icon_name, wrap
                         src={`${process.env.PUBLIC_URL}/img/${icon_name}.jpg`}
                         alt={`${title}`}
                         className={`w-full h-full object-fill transition-transform duration-500 group-hover:scale-105`}
-                        onClick={onClick}
+
                     />
                 </div>
             </div>

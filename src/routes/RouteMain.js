@@ -26,6 +26,8 @@ import PlayGallery from "../pages/stage/PlayGallery";
 import KorMusic from "../pages/stage/KorMusic";
 import AllSearch from "../pages/main/AllSearch";
 import MainMenu from "../pages/main/MainMenu";
+import NobelGallery from "../pages/nobel/NobelGallery";
+import RecommendGallery from "../pages/recommend/RecommendGallery";
 
 console.log("Main:", typeof Main);
 console.log("Login:", typeof Login);
@@ -34,7 +36,7 @@ console.log("Register:", typeof Register);
 console.log("Notice:", typeof Notice);
 console.log("NoticeView:", typeof NoticeView);
 console.log("Guide:", typeof Guide);
-console.log("ExhibiGallery:", typeof ExhibiGallery);
+console.log("RecommendGallery:", typeof ExhibiGallery);
 console.log("GuideGallery:", typeof GuideGallery);
 console.log("JejuFestival:", typeof JejuFestival);
 console.log("ThemeGallery:", typeof ThemeGallery);
@@ -59,20 +61,22 @@ export default function RouteMain() {
                 <Route path="/mainSearch" element={<AllSearch />} />
                 <Route path="/mainMenu" element={<MainMenu />} />
 
-
                 {/*가이드*/}
                 <Route path="/guide/gallery" element={<GuideGallery/>} />
                 <Route path="/guide/gallery/detail" element={<GuideDetail />} />
 
-
                 {/*테마*/}
                 <Route path="/theme/gallery" element={<ThemeGallery/>} />
 
-                {/*전시*/}
-                <Route path="/stage/gallery/exhibition" element={<ExhibiGallery/>} />
+                {/*교육-전시*/}
+                <Route path="/art/gallery" element={<ExhibiGallery/>} />
 
-                {/*뮤지컬*/}
-                <Route path="/stage/gallery/musical" element={<MusicalGallery/>} />
+                {/*이달의 추천 도서*/}
+                <Route path="/recommend/gallery" element={<RecommendGallery/>} />
+
+                {/*노벨*/}
+                <Route path="/nobel/gallery" element={<NobelGallery/>} />
+                {/*<Route path="/nobel/gallery:code" element={<NobelDetail/>} />*/}
 
                 {/*연극*/}
                 <Route path="/stage/gallery/play" element={<PlayGallery/>} />

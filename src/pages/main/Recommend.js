@@ -10,7 +10,7 @@ export default function JejuTheme() {
     const navigate = useNavigate();
 
     const handleClick = (code) => {
-        navigate(`theme/gallery?category=${code}`);
+        navigate(`recommend/gallery?${code}`);
     };
 
     return (
@@ -21,6 +21,7 @@ export default function JejuTheme() {
                 <SectionTitle
                     className={``}
                     title={<>이달의 <span className={`text-mainColor`}>추천</span> 도서</>}
+                    redirectPath={`recommend/gallery`}
                 />
                 <Swiper
                     className="overflow-visible w-full h-fit "

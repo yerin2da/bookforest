@@ -24,7 +24,7 @@ export default function Header({ className=''}) {
         "/guide": "이용가이드",
         "/guide/:id": "이용가이드 상세",
 
-        "/stage/gallery/exhibition":"제주 BEST 전시",
+        "/art/gallery":"도서관 전시정보",
         "/guide/gallery":"여행 가이드",
         "/guide/gallery/detail":"여행 가이드 상세",
         // "/guide/gallery/:category/:cid":"상세 정보",
@@ -62,14 +62,13 @@ export default function Header({ className=''}) {
 
     return (
 
-        <header className={`w-full text-2xl h-20 sticky top-0 z-[9999] max-w-screen-xl pl-4 ${className} 
-                ${bgBlack
-            ? "bg-midBlack text-white"
-            : "bg-white"}
+        <header className={`w-full text-2xl h-20 bg-white border-b pl-4 ${className} 
+               
                 `}>
 
-            <div className={`h-full flex items-center justify-between`}>
-                {showLogo ? (
+            <div className={`h-full max-w-screen-xl flex justify-between mx-auto`}>
+                {showLogo
+                    ? (
                     <div className={` w-full pr-6 flex items-center justify-between h-full`}>
                         <h1
                             className="font-black text-mainColor text-[24px]"
@@ -85,38 +84,12 @@ export default function Header({ className=''}) {
                         <BootstrapNavbar className="hidden lg:block " />
 
                     </div>
-                    ) :
-                    // 메인 서치페이지
-                    mainSearch
-                        ? (
-                            <>
-                                {/*백버튼+검색*/}
-                                <BackButton caption={caption}/>
-                                <SearchInput
-                                    className={`!rounded-full !bg-gray-100 !border-0 !placeholder-gray-400`}
-                                    inputPlaceholder={`제주에서 신나게 놀자!`}
-                                    btnClassName={`text-gray-400`}
-                                    ref={inputRef}
-                                    onSearch={() => {
-                                        const keyword = inputRef.current?.value;
-                                        if (!keyword) return;
-                                        navigate("/mainSearch", {state: {keyword}, replace: true}); // 현재 경로에 state만 갱신
-                                    }}
-                                />
-                            </>
-                        ) : (
-                            <BackButton caption={caption}/>
-                        )
+                    )
+                    : (<BackButton caption={caption}/>)
+
                 }
-                {/*{!hiddenHamberger && !hiddenBell && (*/}
-                {/*    // 공지사항*/}
-                {/*    <LuBell*/}
-                {/*        onClick={() => navigate("/notice")}*/}
-                {/*        className={`cursor-pointer hover:text-mainColor`}/>*/}
-                {/*)}*/}
+
             </div>
-
-
 
         </header>
     );

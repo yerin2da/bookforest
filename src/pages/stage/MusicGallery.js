@@ -6,7 +6,7 @@ import {ImSpinner2} from "react-icons/im";
 import NoResult from "../../components/NoResult";
 import PaginationSimple from "../../components/PaginationSimple";
 import GalleryComponent from "../../components/GalleryComponent";
-import ExhibiGalleryComponent from "../../components/ExhibiGalleryComponent";
+import ExhibiGalleryComponent from "../exhibition/ExhibiGalleryComponent";
 import MusicGalleryComponent from "../../components/MusicGalleryComponent";
 
 const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;

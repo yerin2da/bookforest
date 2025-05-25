@@ -11,7 +11,7 @@ import BootstrapNavbar from "../BootstrapNavbar";
 export default function Main() {
 
     return (
-        <div className='w-full'>
+        <div className='w-full main'>
             <MainVisualSlide/>
             <Recommend/>
             <Nobel/>

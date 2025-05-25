@@ -36,6 +36,10 @@ export default function AuthWatcher() {//로컬 auth값 변경시 로그아웃
 
                     "/art/gallery",
                     "/art/gallery/:category",
+                    "/nobel/gallery",
+                    "/nobel/gallery/:category",
+                    "/recommend/gallery",
+                    "/recommend/gallery/:category",
 
                     "/mainSearch",
                     "/mainMenu"
