@@ -6,7 +6,7 @@ import MainVisualSlide from "./MainVisualSlide";
 import Popular from "./Popular";
 import Children from "./Children";
 import React from "react";
-import BootstrapNavbar from "../BootstrapNavbar";
+import BootstrapNavbar from "../DesktopNavbar";
 
 export default function Main() {
 

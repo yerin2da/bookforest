@@ -11,7 +11,10 @@ import NavIcon from "../components/NavIcon";
 import {FaBars} from "react-icons/fa6";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import BootstrapNavbar from "../pages/BootstrapNavbar"; // ← 핵심! (collapse, dropdown, modal 등 포함)
+import BootstrapNavbar from "../pages/DesktopNavbar"; // ← 핵심! (collapse, dropdown, modal 등 포함)
+import MobileNavbar from "../pages/MobileNavbar";
+import DesktopNavbar from "../pages/DesktopNavbar";
+import HamburgerButton from "../UI/HambergerButton"; // 경로 확인!
 
 
 export default function Header({ className=''}) {
@@ -68,38 +71,41 @@ export default function Header({ className=''}) {
     const navigate = useNavigate();
 
     const inputRef = useRef(null);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
 
-        <header className={`w-full text-2xl h-20 bg-white border-b pl-4 ${className} 
+        <header className={`w-full text-2xl h-20 bg-white border-b px-4 ${className} 
                
                 `}>
 
-            <div className={`h-full max-w-screen-xl flex justify-between mx-auto`}>
-                {showLogo
-                    ? (
-                    <div className={` w-full pr-6 flex items-center justify-between h-full`}>
-                        <h1
-                            className="font-black text-mainColor text-[24px]"
-                            onClick={() => navigate("/")}
-                        >
-                            BOOK<span className={`text-black`}> FOREST</span>
-                        </h1>
+            <div className={`h-full max-w-screen-xl flex justify-between items-center mx-auto`}>
+                <div>
+                    {showLogo
+                        ? (
+                            <div className={` w-full pr-6 flex items-center justify-between h-full`}>
+                                <h1
+                                    className="font-black text-mainColor text-[24px] cursor-pointer"
+                                    onClick={() => navigate("/")}
+                                >
+                                    BOOK<span className={`text-black`}> FOREST</span>
+                                </h1>
 
-                        {/*모바일*/}
-                        <HambergerButton className="lg:hidden" />
+                            </div>
+                        ) : (
+                            <BackButton caption={caption}/>
 
-                        {/*pc*/}
-                        <BootstrapNavbar className="hidden lg:block " />
+                        )}
+                </div>
 
-                    </div>
-                    )
-                    : (<BackButton caption={caption}/>)
+                <div>
+                    <HamburgerButton onClick={() => setIsMobileMenuOpen(true)} />
+                    <DesktopNavbar />
+                    <MobileNavbar isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
+                </div>
 
-                }
 
             </div>
-
         </header>
     );
 }
