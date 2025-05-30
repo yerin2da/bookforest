@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "https://yerin2da.github.io/bookforest/static/css/main.a80f4baa.css",
-    "main.js": "https://yerin2da.github.io/bookforest/static/js/main.fcdcb085.js",
+    "main.css": "https://yerin2da.github.io/bookforest/static/css/main.a1f07bf1.css",
+    "main.js": "https://yerin2da.github.io/bookforest/static/js/main.98debc54.js",
     "static/js/206.0bd5c7aa.chunk.js": "https://yerin2da.github.io/bookforest/static/js/206.0bd5c7aa.chunk.js",
     "index.html": "https://yerin2da.github.io/bookforest/index.html"
   },
   "entrypoints": [
-    "static/css/main.a80f4baa.css",
-    "static/js/main.fcdcb085.js"
+    "static/css/main.a1f07bf1.css",
+    "static/js/main.98debc54.js"
   ]
 }
