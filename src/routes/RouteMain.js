@@ -28,6 +28,10 @@ import AllSearch from "../pages/main/AllSearch";
 import MainMenu from "../pages/main/MainMenu";
 import NobelGallery from "../pages/nobel/NobelGallery";
 import RecommendGallery from "../pages/recommend/RecommendGallery";
+import PopularDetail from "../pages/popular/PopularDetail";
+import LibrarianRecommendGallery from "../pages/librarianRecommend/LibrarianRecommendGallery";
+import NewDetail from "../pages/bookfore/NewDetail";
+import ChildrenGallery from "../pages/children/ChildrenGallery";
 
 console.log("Main:", typeof Main);
 console.log("Login:", typeof Login);
@@ -36,7 +40,7 @@ console.log("Register:", typeof Register);
 console.log("Notice:", typeof Notice);
 console.log("NoticeView:", typeof NoticeView);
 console.log("Guide:", typeof Guide);
-console.log("RecommendGallery:", typeof ExhibiGallery);
+console.log("LibrarianRecommendGallery:", typeof ExhibiGallery);
 console.log("GuideGallery:", typeof GuideGallery);
 console.log("JejuFestival:", typeof JejuFestival);
 console.log("ThemeGallery:", typeof ThemeGallery);
@@ -63,8 +67,6 @@ export default function RouteMain() {
 
                 {/*가이드*/}
                 <Route path="/guide/gallery" element={<GuideGallery/>} />
-                <Route path="/guide/gallery/detail" element={<GuideDetail />} />
-
                 {/*테마*/}
                 <Route path="/theme/gallery" element={<ThemeGallery/>} />
 
@@ -73,6 +75,21 @@ export default function RouteMain() {
 
                 {/*이달의 추천 도서*/}
                 <Route path="/recommend/gallery" element={<RecommendGallery/>} />
+
+                {/*인기도서*/}
+                <Route path="/popular/detail" element={<PopularDetail />} />
+
+                {/*어린이 동화구연*/}
+                <Route path="/children/gallery" element={<ChildrenGallery />} />
+
+                {/*사서 추천 도서*/}
+                <Route path="/bookfore/librarianRecommend/gallery" element={<LibrarianRecommendGallery/>} />
+
+                {/*추천 신작*/}
+                <Route path="/bookfore/new/gallery" element={<NewDetail />} />
+
+                {/*도서관 찾기*/}
+                <Route path="/bookfore/school/gallery" element={<LibrarianRecommendGallery/>} />
 
                 {/*노벨*/}
                 <Route path="/nobel/gallery" element={<NobelGallery/>} />

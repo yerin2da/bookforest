@@ -12,7 +12,7 @@ export default function Popular() {
     const navigate = useNavigate();
 
     const handleClick = (code) => {
-        navigate(`/stage/gallery/${code}`);
+        navigate(`/popular/detail?id=${code}`);
     };
 
     return (
@@ -95,7 +95,6 @@ export default function Popular() {
                 </div>
 
             </section>
-
 
         </div>
     );

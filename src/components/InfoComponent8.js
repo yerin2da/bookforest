@@ -8,7 +8,7 @@ export default function InfoComponent8({
                                        }) {
 
     return (
-        <div className="max-w-[200px] flex group relative pb-2 items-end">
+        <div className="max-w-[200px] flex group relative pb-2 items-end cursor-pointer">
 
             {/* 숫자 이미지 영역 */}
             <div className="w-1/2 h-fit">

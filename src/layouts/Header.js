@@ -24,7 +24,16 @@ export default function Header({ className=''}) {
         "/guide": "이용가이드",
         "/guide/:id": "이용가이드 상세",
 
-        "/art/gallery":"도서관 전시정보",
+        "/art/gallery" : "도서관 전시정보",
+        "/recommend/gallery" : "이달의 추천도서",
+        "/nobel/gallery" : "노벨 수상자의 대표작",
+        "/popular/detail" : "인기도서 상세",
+        "children/gallery" : "어린이 동화구연",
+
+        "/bookfore/librarianRecommend/gallery" : "사서 추천도서",
+        "/bookfore/new/gallery":"추천 신작",
+        "/bookfore/school/gallery":"도서관 찾기",
+
         "/guide/gallery":"여행 가이드",
         "/guide/gallery/detail":"여행 가이드 상세",
         // "/guide/gallery/:category/:cid":"상세 정보",

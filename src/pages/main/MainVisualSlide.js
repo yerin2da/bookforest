@@ -10,7 +10,15 @@ export default function MainVisualSlide() {
     const navigate = useNavigate();
 
     const handleClick = (code) => {
-        // navigate(`/stage/gallery/${code}`);
+        if(code === "librarianRecommend"){
+            navigate(`/bookfore/${code}/gallery`);
+
+        }else if(code === "new"){
+            navigate(`bookfore/${code}/gallery`);
+        }
+        else if(code === "school"){
+            navigate(`bookfore/${code}/gallery`);
+        }
     };
 
     return (

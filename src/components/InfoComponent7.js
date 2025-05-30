@@ -9,7 +9,7 @@ export default function InfoComponent7({
                                            onClick = null,
                                        }) {
     return (
-        <div className={`w-[80%] h-full flex items-center justify-around max-w-screen-xl mx-auto font-pretendard `}
+        <div className={`w-[80%] h-full flex items-center justify-around max-w-screen-xl mx-auto font-pretendard cursor-pointer`}
              onClick={onClick}
         >
             {/* 텍스트 */}

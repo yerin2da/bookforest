@@ -78,7 +78,7 @@
     {
       "txt": "오늘,\n어떤 책을 읽을지\n고민이라면?",
       "txt2": "도서관 사서가 추천하는, \n당신을 위한 도서 리스트!",
-      "code": "recommend",
+      "code": "librarianRecommend",
       "img": "recommend"
     },
     {
@@ -99,30 +99,101 @@
     { "label": "소설",
       "title": "스프링",
       "author": "온다 리쿠",
-      "code": "1"
+      "code": "1",
+      "url":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355693274&srsltid=AfmBOoqsWplcjsJAtai2H06G2fJFHRLnq-mMYkg-xABym1Een_gje0-o"
+
     },
     { "label": "소설",
       "title": "여름의 빌라",
       "author": "백수린",
-      "code": "2"
+      "code": "2",
+      "url":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=244899880"
+
     },
 
     { "label": "소설",
       "title": "불편한 편의점 2",
       "author": "김호연",
-      "code": "3"
+      "code": "3",
+      "url":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=303706448"
+
     },
     { "label": "소설",
       "title": "모 이야기",
       "author": "최연주",
-      "code": "4"
+      "code": "4",
+      "url":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=309862975"
+
     },
     { "label": "소설",
       "title": "모든 것은 영원했다",
       "author": "정지돈",
-      "code": "5"
+      "code": "5",
+      "url":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=258918256"
+
+    },
+    { "label": "소설",
+      "title": "마지막 마음이 들리는 공중전화",
+      "author": "이수연",
+      "code": "6",
+      "url":"https://www.yes24.com/product/goods/124521651"
+
     }
   ],
+  "monthCategory" : [
+    {
+      "code": "1",
+      "label": "5월 추천"
+    },{
+      "code": "2",
+      "label": "4월 추천"
+    },{
+      "code": "3",
+      "label": "3월 추천"
+    },{
+      "code": "4",
+      "label": "2월 추천"
+    },{
+      "code": "5",
+      "label": "1월 추천"
+    }
+
+  ],
+  "librarianCategory" : [
+    {
+      "code": "1",
+      "label": "문학"
+    },{
+      "code": "2",
+      "label": "인문과학"
+    },{
+      "code": "3",
+      "label": "사회과학"
+    },{
+      "code": "4",
+      "label": "자연과학"
+    }
+  ],
+  "nobelLabelCategory" : [
+    {
+      "code": "1",
+      "label": "소설"
+    },{
+      "code": "2",
+      "label": "희곡"
+    },{
+      "code": "3",
+      "label": "시"
+    },{
+      "code": "4",
+      "label": "노래"
+    },{
+      "code": "5",
+      "label": "르포"
+    }
+
+  ],
+
   "nobelCategory" : [
     {
       "title": "소년이 온다",
@@ -237,16 +308,16 @@
   ],
   "childrenCategory" : [
       {
-        "txt": "한국 전래동화",
-        "code": 1
+        "label": "한국 전래동화",
+        "code": "1"
       },
       {
-        "txt": "외국 전래동화",
-        "code": 2
+        "label": "외국 전래동화",
+        "code": "2"
       },
       {
-        "txt": "창작동화",
-        "code": 3
+        "label": "창작동화",
+        "code": "3"
       }
   ]
 

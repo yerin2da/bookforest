@@ -25,7 +25,7 @@ module.exports = {
       },
       boxShadow: {
         shadowTop: "2px 2px 5px #9999991a",
-        shadowBottom: "0px -1px 5px #9999991a",
+        shadowBottom: "5px 0px 5px #e1e1e1",
         shadowBase: "2px 2px 5px rgba(0,0,0,0.1)",
         topInner: 'inset 0px -4px 6px rgba(0, 0, 0, 0.07)',
         fit:'5px 6px 4px 0 rgba(0, 0, 0, 0.2)',

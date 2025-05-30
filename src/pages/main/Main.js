@@ -1,7 +1,7 @@
 
 import Recommend from "./Recommend";
 import Art from "./Art";
-import Nobel from "./nobel";
+import Nobel from "./Nobel";
 import MainVisualSlide from "./MainVisualSlide";
 import Popular from "./Popular";
 import Children from "./Children";

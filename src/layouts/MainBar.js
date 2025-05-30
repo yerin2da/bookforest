@@ -14,7 +14,7 @@ export default function MainBar() {
     const navigate = useNavigate();
 
     return (
-        <div className={`w-full`}>
+        <div className={`w-full relative z-1`}>
             {/*top버튼*/}
             <ScrollTopButton />
 

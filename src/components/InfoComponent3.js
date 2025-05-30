@@ -2,7 +2,7 @@
 export default function InfoComponent3({label, title, txt, txt2, icon_name, wrapClass='', txtWrapClass='', titleClass='',labelClass='', txtClass='', txt2Class='', imgClass='' ,  onClick=null}) {
 
     return (
-        <div onClick={onClick} className={`min-w-[130px] max-w-[160px] max-h-[320px] ${wrapClass}`}>
+        <div onClick={onClick} className={`cursor-pointer min-w-[130px] max-w-[160px] max-h-[320px] ${wrapClass}`}>
             <div
 
                 className={`w-full rounded-lg group bg-center bg-no-repeat text-white relative overflow-hidden bg-cover shadow-fit`}

@@ -6,12 +6,15 @@ import {Autoplay} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
 import WFullButton from "../../components/WFullButton";
 
-export default function JejuTheme() {
+export default function Recommend() {
     const navigate = useNavigate();
 
     const handleClick = (code) => {
-        navigate(`recommend/gallery?${code}`);
+        if (code.startsWith("http")) {
+            window.open(code, "_blank");
+        }
     };
+
 
     return (
         <section className={``}>
@@ -21,7 +24,7 @@ export default function JejuTheme() {
                 <SectionTitle
                     className={``}
                     title={<>이달의 <span className={`text-mainColor`}>추천</span> 도서</>}
-                    redirectPath={`recommend/gallery`}
+                    redirectPath={`recommend/gallery?category=1`}
                 />
                 <Swiper
                     className="overflow-visible w-full h-fit "
@@ -67,7 +70,7 @@ export default function JejuTheme() {
                     {data.recommendCategory.map((item, idx) => (
                         <SwiperSlide key={idx} className="">
                             <InfoComponent3
-                                onClick={() => handleClick(item.code)}
+                                onClick={() => handleClick(item.url)}
                                 icon_name={`/mainRecommend/${item.code}`}
                                 label={item.label}
                                 title={item.title}

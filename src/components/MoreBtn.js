@@ -2,7 +2,7 @@ import React from "react";
 
 export default function MoreBtn({ onClick = null, disabled = false, isLoading = false, className = '' }) {
     return (
-        <div className="flex justify-center pt-4">
+        <div className="flex justify-center pt-4 relative z-1">
             <button
                 onClick={onClick}
                 disabled={disabled}

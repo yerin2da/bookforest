@@ -108,6 +108,24 @@
    ) 1;
 
  }
+ .conic-border-box2 {
+   border: 6px solid transparent;
+
+   border-image: conic-gradient(
+     from -90deg at center,
+     #F3DFAC 2%,
+     #ffffff 18%,
+     #F3DFAC 24%,
+     #D5D4D2 37%,
+     #FFFFFF 48%,
+     #FFFFFF 55%,
+     #F3DFAC 67%,
+     #FFFFFF 76%,
+     #ffffff 80%,
+     #F3DFAC 100%
+   ) 1;
+
+ }
 
  //텍스트 보더
  @layer utilities {
@@ -339,3 +357,51 @@ select:focus-visible{
  .floating {
    animation: float 2s ease-in-out infinite;
  }
+
+ .bar {
+   display: inline-block;
+   width: 1px;
+   height: 8px;
+   margin: 5px 6px 0;
+   background-color: #ccc;
+   font-size: 0;
+   vertical-align: top;
+ }
+
+ //이미지 플립
+ /* NewDetail.css */
+
+ .flip {
+   position: relative;
+   perspective: 1100px;
+ }
+
+ .card {
+   width: 100%;
+   height: 100%;
+   transition: 0.4s;
+   transform-style: preserve-3d;
+   position: relative;
+   border:none;
+ }
+
+ .front,
+ .back {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   backface-visibility: hidden;
+   border-radius: 0.5rem;
+   overflow: hidden;
+   border: 1px solid #efefef;
+ }
+
+ .back {
+   transform: rotateY(180deg);
+ }
+
+ .flip:hover .card {
+   transform: rotateY(180deg);
+ }
+
+

@@ -7,7 +7,7 @@ export default function InfoComponent6({
     const isEven = index % 2 === 0;//짝수면 사진이 위
 
     return (
-        <div className="max-w-[250px] conic-border-box p-4 xs:p-6 sm:p-8 w-full h-full">
+        <div className="cursor-pointer max-w-[250px] conic-border-box p-4 xs:p-6 sm:p-8 w-full h-full">
             <div
                 className={`w-fit h-full flex ${isEven ? 'flex-col-reverse' : 'flex-col'} rounded group justify-between gap-10`}
             >
